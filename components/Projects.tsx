@@ -30,7 +30,7 @@ const projects: Project[] = [
     stack: ["Python", "DuckDB", "PyTorch", "Groq API", "Streamlit"],
     status: "live",
     github: "https://github.com/arthurtorres/financial-dashboard",
-    demo: "https:financial-intelligence-dashboard-arthurtorres.app",
+    demo: "https://financial-intelligence-dashboard-arthurtorres.streamlit.app",
   },
   {
     title: "Vale Desenvolver 2026",
