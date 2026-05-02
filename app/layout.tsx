@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   keywords: ['Data Engineer', 'Automation', 'Python', 'LLM', 'AI', 'Banco Inter', 'Arthur Torres'],
   authors: [{ name: 'Arthur Torres' }],
   creator: 'Arthur Torres',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
