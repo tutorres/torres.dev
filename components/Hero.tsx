@@ -26,7 +26,7 @@ export function Hero({ locale }: HeroProps) {
 
       <div className="mt-6 flex items-center gap-4">
         <a
-          href="https://github.com/arthurtorres"
+          href="https://github.com/tutorres"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"

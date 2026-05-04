@@ -23,8 +23,8 @@ const contactLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/arthurtorres",
-    display: "github.com/arthurtorres",
+    href: "https://github.com/tutorres",
+    display: "github.com/tutorres",
   },
 ]
 
