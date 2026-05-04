@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { getArticleBySlug, getAllArticles } from "@/lib/articles"
+import { articleComponents } from "@/content/articles"
 import { ArrowLeft } from "lucide-react"
 
 interface ArticlePageProps {
@@ -17,11 +18,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ArticlePageProps) {
   const { slug } = await params
   const article = getArticleBySlug(slug)
-  
+
   if (!article) {
-    return {
-      title: "Article Not Found",
-    }
+    return { title: "Article Not Found" }
   }
 
   return {
@@ -37,6 +36,14 @@ export async function generateMetadata({ params }: ArticlePageProps) {
   }
 }
 
+function formatDate(dateString: string) {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+}
+
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params
   const article = getArticleBySlug(slug)
@@ -47,89 +54,105 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   if (!article.published) {
     return (
-      <main className="min-h-screen bg-background py-24">
-        <article className="mx-auto max-w-2xl px-4">
+      <main className="min-h-screen bg-background">
+        <div className="mx-auto max-w-3xl px-4 pt-14 pb-24">
           <Link
             href="/#articles"
-            className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to home
+            Back to articles
           </Link>
 
-          <header className="mb-12">
-            <div className="mb-4 flex items-center gap-3 text-sm text-muted-foreground">
-              <time dateTime={article.date}>
-                {new Date(article.date).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </time>
-              <span className="text-border">·</span>
-              <span>{article.readTime} min read</span>
-            </div>
+          <p className="mt-10 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Article
+          </p>
+
+          <header className="mt-3">
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {article.title}
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">{article.description}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5 text-sm text-muted-foreground">
+              <time dateTime={article.date}>{formatDate(article.date)}</time>
+              <span className="text-border">·</span>
+              <span>{article.readTime} min read</span>
+              <span className="text-border">·</span>
+              <span>Arthur Torres</span>
+            </div>
           </header>
 
-          <div className="rounded-lg border border-border bg-secondary/50 p-8 text-center">
+          <div className="mt-12 rounded-lg border border-border bg-secondary/50 p-8 text-center">
             <p className="text-muted-foreground">
-              This article is coming soon. Check back after{" "}
-              {new Date(article.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-              .
+              This article is coming soon. Check back after {formatDate(article.date)}.
             </p>
           </div>
-        </article>
+        </div>
       </main>
     )
   }
 
-  // For published articles, we'll load MDX content here
-  // This is a placeholder until MDX content is added
+  const Content = articleComponents[slug]
+
   return (
-    <main className="min-h-screen bg-background py-24">
-      <article className="mx-auto max-w-2xl px-4">
+    <main className="min-h-screen bg-background">
+      <div className="mx-auto max-w-3xl px-4 pt-14 pb-24">
         <Link
           href="/#articles"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to home
+          Back to articles
         </Link>
 
-        <header className="mb-12">
-          <div className="mb-4 flex items-center gap-3 text-sm text-muted-foreground">
-            <time dateTime={article.date}>
-              {new Date(article.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </time>
-            <span className="text-border">·</span>
-            <span>{article.readTime} min read</span>
-          </div>
+        <p className="mt-10 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          Article
+        </p>
+
+        <header className="mt-3">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {article.title}
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">{article.description}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5 text-sm text-muted-foreground">
+            <time dateTime={article.date}>{formatDate(article.date)}</time>
+            <span className="text-border">·</span>
+            <span>{article.readTime} min read</span>
+            <span className="text-border">·</span>
+            <span>Arthur Torres</span>
+          </div>
         </header>
 
-        <div className="prose prose-invert max-w-none">
-          {/* MDX content will be rendered here */}
-          <p className="text-muted-foreground">Article content goes here.</p>
+        <div className="mt-10">
+          {Content ? (
+            <Content />
+          ) : (
+            <p className="text-muted-foreground">Article content goes here.</p>
+          )}
         </div>
 
-        {(article.mediumUrl || article.substackUrl) && (
-          <footer className="mt-12 border-t border-border pt-8">
-            <p className="text-sm text-muted-foreground">
+        <footer className="mt-16 border-t border-border pt-8">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Written by
+              </p>
+              <p className="mt-2 font-medium text-foreground">Arthur Torres</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Data engineer & ML practitioner. Building financial pipelines and LLM applications.
+              </p>
+            </div>
+            <Link
+              href="/#articles"
+              className="inline-flex shrink-0 items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              More articles
+            </Link>
+          </div>
+
+          {(article.mediumUrl || article.substackUrl) && (
+            <p className="mt-6 text-sm text-muted-foreground">
               Also published on:{" "}
               {article.mediumUrl && (
                 <a
@@ -153,9 +176,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </a>
               )}
             </p>
-          </footer>
-        )}
-      </article>
+          )}
+        </footer>
+      </div>
     </main>
   )
 }

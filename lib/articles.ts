@@ -11,6 +11,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "financial-metrics-rsi-macd",
+    title: "Designing Financial Features: The Math Behind RSI, MACD, and Rolling Statistics",
+    description:
+      "A deep dive into the math behind common financial indicators: daily return, moving averages, RSI, MACD, and volatility, and how they transform raw market data into actionable signals.",
+    date: "2026-05-03",
+    readTime: 8,
+    published: true,
+  },
+  {
     slug: "medallion-architecture-financial-pipeline",
     title: "How I built a financial data pipeline using the medallion architecture",
     description: "A deep dive into building a bronze-silver-gold data pipeline for financial analytics with DuckDB and Python.",
