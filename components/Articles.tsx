@@ -3,6 +3,7 @@
 import { type Locale, getTranslations } from "@/lib/i18n"
 import { getAllArticles } from "@/lib/articles"
 import { Badge } from "@/components/ui/badge"
+import { ArrowRight } from "lucide-react"
 
 interface ArticlesProps {
   locale: Locale
@@ -53,6 +54,10 @@ export function Articles({ locale }: ArticlesProps) {
                         {article.title}
                       </h3>
                       <p className="text-muted-foreground">{article.description}</p>
+                      <span className="inline-flex items-center gap-1 pt-1 font-mono text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+                        {locale === "en" ? "Read" : "Ler"}
+                        <ArrowRight className="h-3 w-3" />
+                      </span>
                     </article>
                   </a>
                 ) : (
