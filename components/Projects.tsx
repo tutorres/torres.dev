@@ -20,7 +20,6 @@ interface ProjectsProps {
 const statusColors: Record<ProjectStatus, string> = {
   live: "bg-green-500/10 text-green-500 border-green-500/20",
   inDevelopment: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
-  comingSoon: "bg-blue-500/10 text-blue-500 border-blue-500/20",
   previousWork: "bg-muted text-muted-foreground border-border",
 }
 
@@ -37,12 +36,14 @@ export function Projects({ locale }: ProjectsProps) {
           <article key={index} className="rounded-lg border border-border bg-card p-5">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
-              <Badge
-                variant="outline"
-                className={`font-mono text-xs ${statusColors[project.status]}`}
-              >
-                {t.projects.status[project.status]}
-              </Badge>
+              {project.status && (
+                <Badge
+                  variant="outline"
+                  className={`font-mono text-xs ${statusColors[project.status]}`}
+                >
+                  {t.projects.status[project.status]}
+                </Badge>
+              )}
             </div>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
               {project.description[locale]}

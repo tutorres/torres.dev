@@ -19,6 +19,16 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
+    key: "mlai",
+    skills: [
+      { name: "LLM Agents" },
+      { name: "LangChain" },
+      { name: "OpenAI API" },
+      { name: "Groq" },
+      { name: "PyTorch" },
+    ],
+  },
+  {
     key: "languages",
     skills: [{ name: "Python" }, { name: "SQL" }, { name: "TypeScript" }],
   },
@@ -33,21 +43,13 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    key: "mlai",
-    skills: [
-      { name: "PyTorch" },
-      { name: "OpenAI API" },
-      { name: "Groq" },
-      { name: "LLM Agents" },
-    ],
-  },
-  {
     key: "cloud",
     skills: [{ name: "AWS", status: "inProgress" }],
   },
   {
     key: "tools",
     skills: [
+      { name: "n8n" },
       { name: "Git" },
       { name: "GitHub" },
       { name: "Docker" },

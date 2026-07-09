@@ -1,10 +1,10 @@
-export type ProjectStatus = "live" | "inDevelopment" | "comingSoon" | "previousWork"
+export type ProjectStatus = "live" | "inDevelopment" | "previousWork"
 
 export interface Project {
   title: string
   description: { en: string; pt: string }
   stack: string[]
-  status: ProjectStatus
+  status?: ProjectStatus
   github?: string
   demo?: string
   demoSlug?: string
@@ -30,8 +30,6 @@ export const projects: Project[] = [
       pt: "Análise preditiva em 37M+ registros de telemetria de uma frota de mineração de ferro. Construído para o Programa Desenvolver 2026 da Vale.",
     },
     stack: ["Python", "Pandas", "XGBoost", "SHAP", "DuckDB"],
-    status: "comingSoon",
-    github: "https://github.com/arthurtorres/vale-desenvolver",
   },
   {
     title: "PDF Accessibility (Akyou)",

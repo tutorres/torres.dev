@@ -13,18 +13,18 @@ export const translations = {
     },
     // Hero
     hero: {
-      title: "Data & Automation Engineer",
+      title: "AI Engineer",
       location: "Belo Horizonte, Brazil",
       cta: "See projects",
     },
     // About
     about: {
       title: "About",
-      description: `I build data pipelines and AI-powered automations that reduce manual work and support operational decisions.
+      description: `I build AI-powered systems and automations that solve real business problems.
 
-Currently at Banco Inter's Global Operations team — Python automations, LLM agents, SQL dashboards.
+Currently at Banco Inter's Global Operations team — LLM agents, Python automations, and operational pipelines that have saved 1.4 FTEs in under 5 months.
 
-Previously at Akyou — end-to-end PDF accessibility solution with OpenAI API.`,
+Previously at Akyou — end-to-end PDF accessibility solution using OpenAI API.`,
       stack: "Stack",
     },
     // Experience
@@ -41,7 +41,6 @@ Previously at Akyou — end-to-end PDF accessibility solution with OpenAI API.`,
       status: {
         live: "Live",
         inDevelopment: "In development",
-        comingSoon: "Coming soon",
         previousWork: "Previous work",
       },
     },
@@ -82,18 +81,18 @@ Previously at Akyou — end-to-end PDF accessibility solution with OpenAI API.`,
     },
     // Hero
     hero: {
-      title: "Engenheiro de Dados & Automação",
+      title: "Engenheiro de IA",
       location: "Belo Horizonte, Brasil",
       cta: "Ver projetos",
     },
     // About
     about: {
       title: "Sobre",
-      description: `Construo pipelines de dados e automações com IA que reduzem trabalho manual e apoiam decisões operacionais.
+      description: `Construo sistemas e automações com IA que resolvem problemas reais de negócio.
 
-Atualmente no time de Operações Globais do Banco Inter — automações em Python, agentes LLM, dashboards SQL.
+Atualmente no time de Operações Globais do Banco Inter — agentes LLM, automações em Python e pipelines operacionais que economizaram 1,4 FTE em menos de 5 meses.
 
-Anteriormente na Akyou — solução completa de acessibilidade de PDFs com OpenAI API.`,
+Anteriormente na Akyou — solução completa de acessibilidade de PDFs usando OpenAI API.`,
       stack: "Stack",
     },
     // Experience
@@ -110,7 +109,6 @@ Anteriormente na Akyou — solução completa de acessibilidade de PDFs com Open
       status: {
         live: "Ativo",
         inDevelopment: "Em desenvolvimento",
-        comingSoon: "Em breve",
         previousWork: "Trabalho anterior",
       },
     },

@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Arthur Torres — Data & Automation Engineer',
-  description: 'I build data pipelines and AI-powered automations that reduce manual work and support operational decisions. Currently at Banco Inter.',
-  keywords: ['Data Engineer', 'Automation', 'Python', 'LLM', 'AI', 'Banco Inter', 'Arthur Torres'],
+  title: 'Arthur Torres — AI Engineer',
+  description: 'I build AI-powered systems and automations that solve real business problems. Currently at Banco Inter.',
+  keywords: ['AI Engineer', 'LLM Agents', 'Automation', 'Python', 'LangChain', 'Banco Inter', 'Arthur Torres'],
   authors: [{ name: 'Arthur Torres' }],
   creator: 'Arthur Torres',
   icons: {
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://torres.dev',
-    title: 'Arthur Torres — Data & Automation Engineer',
-    description: 'I build data pipelines and AI-powered automations that reduce manual work and support operational decisions.',
+    title: 'Arthur Torres — AI Engineer',
+    description: 'I build AI-powered systems and automations that solve real business problems.',
     siteName: 'torres.dev',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Arthur Torres — Data & Automation Engineer',
-    description: 'I build data pipelines and AI-powered automations that reduce manual work and support operational decisions.',
+    title: 'Arthur Torres — AI Engineer',
+    description: 'I build AI-powered systems and automations that solve real business problems.',
   },
   robots: {
     index: true,

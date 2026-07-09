@@ -52,46 +52,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound()
   }
 
-  if (!article.published) {
-    return (
-      <main className="min-h-screen bg-background">
-        <div className="mx-auto max-w-3xl px-4 pt-14 pb-24">
-          <Link
-            href="/#articles"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to articles
-          </Link>
-
-          <p className="mt-10 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Article
-          </p>
-
-          <header className="mt-3">
-            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              {article.title}
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">{article.description}</p>
-            <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5 text-sm text-muted-foreground">
-              <time dateTime={article.date}>{formatDate(article.date)}</time>
-              <span className="text-border">·</span>
-              <span>{article.readTime} min read</span>
-              <span className="text-border">·</span>
-              <span>Arthur Torres</span>
-            </div>
-          </header>
-
-          <div className="mt-12 rounded-lg border border-border bg-secondary/50 p-8 text-center">
-            <p className="text-muted-foreground">
-              This article is coming soon. Check back after {formatDate(article.date)}.
-            </p>
-          </div>
-        </div>
-      </main>
-    )
-  }
-
   const Content = articleComponents[slug]
 
   return (
