@@ -14,17 +14,19 @@ export const translations = {
     // Hero
     hero: {
       title: "AI Engineer",
-      location: "Belo Horizonte, Brazil",
+      tagline: "Production LLM agents & automation — turning operational problems into shipped systems.",
+      location: "Belo Horizonte, Brazil · Open to remote",
       cta: "See projects",
+      resume: "Résumé",
     },
     // About
     about: {
       title: "About",
-      description: `I build AI-powered systems and automations that solve real business problems.
+      description: `I build AI-powered systems and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations team — LLM agents, Python automations, and operational pipelines that have saved 1.4 FTEs in under 5 months.
+Currently at Banco Inter's Global Operations — LLM agents, Python automations, and data pipelines saving 1.0 FTE in under 5 months.
 
-Previously at Akyou — end-to-end PDF accessibility solution using OpenAI API.`,
+Previously at Akyou — end-to-end document intelligence pipeline using OpenAI API.`,
       stack: "Stack",
     },
     // Experience
@@ -38,6 +40,7 @@ Previously at Akyou — end-to-end PDF accessibility solution using OpenAI API.`
       title: "Projects",
       viewGithub: "GitHub",
       viewDemo: "Demo",
+      viewCaseStudy: "Case study",
       status: {
         live: "Live",
         inDevelopment: "In development",
@@ -54,10 +57,11 @@ Previously at Akyou — end-to-end PDF accessibility solution using OpenAI API.`
       title: "Skills",
       categories: {
         languages: "Languages",
+        aiml: "AI & LLM",
         data: "Data",
-        mlai: "ML / AI",
-        cloud: "Cloud",
+        infra: "Infrastructure",
         tools: "Tools",
+        practices: "Practices",
         certifications: "Certifications",
       },
       inProgress: "in progress",
@@ -82,17 +86,19 @@ Previously at Akyou — end-to-end PDF accessibility solution using OpenAI API.`
     // Hero
     hero: {
       title: "Engenheiro de IA",
-      location: "Belo Horizonte, Brasil",
+      tagline: "Agentes LLM e automação em produção — transformando problemas operacionais em sistemas entregues.",
+      location: "Belo Horizonte, Brasil · Aberto a remoto",
       cta: "Ver projetos",
+      resume: "Currículo",
     },
     // About
     about: {
       title: "Sobre",
-      description: `Construo sistemas e automações com IA que resolvem problemas reais de negócio.
+      description: `Construo sistemas e automações com IA que resolvem problemas operacionais reais.
 
-Atualmente no time de Operações Globais do Banco Inter — agentes LLM, automações em Python e pipelines operacionais que economizaram 1,4 FTE em menos de 5 meses.
+Atualmente nas Operações Globais do Banco Inter — agentes LLM, automações em Python e pipelines de dados economizando 1,0 FTE em menos de 5 meses.
 
-Anteriormente na Akyou — solução completa de acessibilidade de PDFs usando OpenAI API.`,
+Anteriormente na Akyou — pipeline completo de inteligência documental usando OpenAI API.`,
       stack: "Stack",
     },
     // Experience
@@ -106,6 +112,7 @@ Anteriormente na Akyou — solução completa de acessibilidade de PDFs usando O
       title: "Projetos",
       viewGithub: "GitHub",
       viewDemo: "Demo",
+      viewCaseStudy: "Estudo de caso",
       status: {
         live: "Ativo",
         inDevelopment: "Em desenvolvimento",
@@ -122,10 +129,11 @@ Anteriormente na Akyou — solução completa de acessibilidade de PDFs usando O
       title: "Habilidades",
       categories: {
         languages: "Linguagens",
+        aiml: "IA & LLM",
         data: "Dados",
-        mlai: "ML / IA",
-        cloud: "Cloud",
+        infra: "Infraestrutura",
         tools: "Ferramentas",
+        practices: "Práticas",
         certifications: "Certificações",
       },
       inProgress: "em progresso",

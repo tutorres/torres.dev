@@ -20,24 +20,24 @@ const experiences: ExperienceItem[] = [
   {
     company: "Banco Inter",
     role: {
-      en: "Data & Automation Intern — Global Operations",
-      pt: "Estagiário de Dados & Automação — Operações Globais",
+      en: "Data & Automation — Global Operations",
+      pt: "Dados & Automação — Operações Globais",
     },
     period: {
       en: "Jan 2026 – Present",
       pt: "Jan 2026 – Atual",
     },
-    stack: ["Python", "SQL", "Tableau", "LLM Agents"],
+    stack: ["Python", "FastAPI", "LLM Agents", "Docker", "Kubernetes", "GitLab CI/CD"],
     bullets: {
       en: [
-        "Built Python automations orchestrating workflows, reducing manual work",
-        "Developed LLM agents for contextual analysis supporting governance decisions",
-        "Designed SQL dashboards delivering operational insights for global team",
+        "Built and deployed LLM agents in production for contextual analysis supporting governance decisions",
+        "Engineered Python automations orchestrating operational workflows, saving 1.0 FTE in under 5 months",
+        "Deployed automations as containerized microservices on the team's Docker, Kubernetes, and GitLab CI/CD platform",
       ],
       pt: [
-        "Construí automações em Python orquestrando workflows, reduzindo trabalho manual",
-        "Desenvolvi agentes LLM para análise contextual apoiando decisões de governança",
-        "Projetei dashboards SQL entregando insights operacionais para o time global",
+        "Construí e coloquei agentes LLM em produção para análise contextual apoiando decisões de governança",
+        "Desenvolvi automações em Python orquestrando workflows operacionais, economizando 1,0 FTE em menos de 5 meses",
+        "Fiz deploy das automações como microsserviços conteinerizados na plataforma de Docker, Kubernetes e GitLab CI/CD do time",
       ],
     },
   },
@@ -58,14 +58,14 @@ const experiences: ExperienceItem[] = [
     stack: ["Python", "OpenAI API", "LLM Pipelines"],
     bullets: {
       en: [
-        "Built end-to-end PDF accessibility solution using OpenAI API",
-        "Developed LLM pipelines for unstructured document processing",
-        "Handled API integration and output formatting from scratch",
+        "Built end-to-end document intelligence pipeline using OpenAI API",
+        "Developed LLM pipelines for unstructured document processing at scale",
+        "Owned API integration and structured output formatting from scratch",
       ],
       pt: [
-        "Construí solução completa de acessibilidade de PDFs usando OpenAI API",
-        "Desenvolvi pipelines LLM para processamento de documentos não estruturados",
-        "Implementei integração de API e formatação de saída do zero",
+        "Construí pipeline completo de inteligência documental usando OpenAI API",
+        "Desenvolvi pipelines LLM para processamento de documentos não estruturados em escala",
+        "Responsável pela integração de API e formatação estruturada de saída do zero",
       ],
     },
   },

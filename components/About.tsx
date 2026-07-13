@@ -9,13 +9,14 @@ interface AboutProps {
 
 const stackItems = [
   "Python",
-  "SQL",
-  "Tableau",
-  "DuckDB",
-  "PyTorch",
+  "LLM Agents",
+  "FastAPI",
   "OpenAI API",
   "Groq",
-  "Git",
+  "PyTorch",
+  "DuckDB",
+  "Docker",
+  "Kubernetes",
 ]
 
 export function About({ locale }: AboutProps) {

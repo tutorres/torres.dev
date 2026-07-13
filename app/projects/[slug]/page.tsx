@@ -1,84 +1,81 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { getArticleBySlug, getAllArticles } from "@/lib/articles"
-import { articleComponents } from "@/content/articles"
+import { Github } from "lucide-react"
+import { getProjectByCaseStudy, getCaseStudyProjects } from "@/lib/projects"
 import { author } from "@/lib/author"
+import { projectComponents } from "@/content/projects"
 import { ArrowLeft } from "lucide-react"
 
-interface ArticlePageProps {
+interface ProjectPageProps {
   params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  const articles = getAllArticles()
-  return articles.map((article) => ({
-    slug: article.slug,
+  const projects = getCaseStudyProjects()
+  return projects.map((project) => ({
+    slug: project.caseStudy!,
   }))
 }
 
-export async function generateMetadata({ params }: ArticlePageProps) {
+export async function generateMetadata({ params }: ProjectPageProps) {
   const { slug } = await params
-  const article = getArticleBySlug(slug)
+  const project = getProjectByCaseStudy(slug)
 
-  if (!article) {
-    return { title: "Article Not Found" }
+  if (!project) {
+    return { title: "Project Not Found" }
   }
 
+  const title = project.caseStudyTitle ?? project.title
+  const description = project.caseStudyTagline ?? project.description.en
+
   return {
-    title: `${article.title} — Arthur Torres`,
-    description: article.description,
+    title: `${title} — Arthur Torres`,
+    description,
     openGraph: {
-      title: article.title,
-      description: article.description,
+      title,
+      description,
       type: "article",
-      publishedTime: article.date,
       authors: ["Arthur Torres"],
     },
   }
 }
 
-function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  })
-}
-
-export default async function ArticlePage({ params }: ArticlePageProps) {
+export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params
-  const article = getArticleBySlug(slug)
+  const project = getProjectByCaseStudy(slug)
 
-  if (!article) {
+  if (!project) {
     notFound()
   }
 
-  const Content = articleComponents[slug]
+  const Content = projectComponents[slug]
 
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-3xl px-4 pt-14 pb-24">
         <Link
-          href="/#articles"
+          href="/#projects"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to articles
+          Back to projects
         </Link>
 
         <p className="mt-10 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
-          Article
+          Case study
         </p>
 
         <header className="mt-3">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {article.title}
+            {project.caseStudyTitle ?? project.title}
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">{article.description}</p>
+          <p className="mt-4 text-lg text-muted-foreground">
+            {project.caseStudyTagline ?? project.description.en}
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5 text-sm text-muted-foreground">
-            <time dateTime={article.date}>{formatDate(article.date)}</time>
+            <span>Predictive Maintenance</span>
             <span className="text-border">·</span>
-            <span>{article.readTime} min read</span>
+            <span>Machine Learning</span>
             <span className="text-border">·</span>
             <span>Arthur Torres</span>
           </div>
@@ -88,7 +85,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {Content ? (
             <Content />
           ) : (
-            <p className="text-muted-foreground">Article content goes here.</p>
+            <p className="text-muted-foreground">Case study content goes here.</p>
           )}
         </div>
 
@@ -102,38 +99,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <p className="mt-1 text-sm text-muted-foreground">{author.bio}</p>
             </div>
             <Link
-              href="/#articles"
+              href="/#projects"
               className="inline-flex shrink-0 items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              More articles
+              More projects
             </Link>
           </div>
 
-          {(article.mediumUrl || article.substackUrl) && (
+          {project.github && (
             <p className="mt-6 text-sm text-muted-foreground">
-              Also published on:{" "}
-              {article.mediumUrl && (
-                <a
-                  href={article.mediumUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-muted-foreground transition-colors"
-                >
-                  Medium
-                </a>
-              )}
-              {article.mediumUrl && article.substackUrl && " · "}
-              {article.substackUrl && (
-                <a
-                  href={article.substackUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-muted-foreground transition-colors"
-                >
-                  Substack
-                </a>
-              )}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-foreground hover:text-muted-foreground transition-colors"
+              >
+                <Github className="h-4 w-4" />
+                View on GitHub
+              </a>
             </p>
           )}
         </footer>

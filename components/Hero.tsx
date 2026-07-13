@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, MapPin } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { type Locale, getTranslations } from "@/lib/i18n"
 
@@ -19,7 +19,10 @@ export function Hero({ locale }: HeroProps) {
       <p className="mt-3 font-mono text-lg text-muted-foreground sm:text-xl">
         {t.hero.title}
       </p>
-      <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
+      <p className="mt-4 max-w-xl text-balance text-base text-muted-foreground">
+        {t.hero.tagline}
+      </p>
+      <p className="mt-3 flex items-center gap-1.5 text-sm text-muted-foreground">
         <MapPin className="size-4" />
         {t.hero.location}
       </p>
@@ -52,9 +55,17 @@ export function Hero({ locale }: HeroProps) {
         </a>
       </div>
 
-      <Button asChild className="mt-8" size="lg">
-        <a href="#projects">{t.hero.cta}</a>
-      </Button>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <Button asChild size="lg">
+          <a href="#projects">{t.hero.cta}</a>
+        </Button>
+        <Button asChild variant="outline" size="lg">
+          <a href="/arthur_torres_cv.pdf" target="_blank" rel="noopener noreferrer">
+            <FileText className="size-4" />
+            {t.hero.resume}
+          </a>
+        </Button>
+      </div>
     </section>
   )
 }

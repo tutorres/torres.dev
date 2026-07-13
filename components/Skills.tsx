@@ -19,49 +19,59 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    key: "mlai",
-    skills: [
-      { name: "LLM Agents" },
-      { name: "LangChain" },
-      { name: "OpenAI API" },
-      { name: "Groq" },
-      { name: "PyTorch" },
-    ],
-  },
-  {
     key: "languages",
     skills: [{ name: "Python" }, { name: "SQL" }, { name: "TypeScript" }],
+  },
+  {
+    key: "aiml",
+    skills: [
+      { name: "LLM Agents" },
+      { name: "RAG" },
+      { name: "OpenAI / Groq API" },
+      { name: "PyTorch" },
+      { name: "LSTM" },
+      { name: "XGBoost / LightGBM" },
+      { name: "SHAP" },
+    ],
   },
   {
     key: "data",
     skills: [
       { name: "DuckDB" },
       { name: "Pandas" },
-      { name: "Tableau" },
       { name: "Plotly" },
       { name: "Streamlit" },
     ],
   },
   {
-    key: "cloud",
-    skills: [{ name: "AWS", status: "inProgress" }],
+    key: "infra",
+    skills: [
+      { name: "Docker" },
+      { name: "Kubernetes" },
+      { name: "GitLab CI/CD" },
+      { name: "AWS" },
+    ],
   },
   {
     key: "tools",
     skills: [
+      { name: "FastAPI" },
       { name: "n8n" },
       { name: "Git" },
       { name: "GitHub" },
-      { name: "Docker" },
-      { name: "Airflow", status: "inProgress" },
+    ],
+  },
+  {
+    key: "practices",
+    skills: [
+      { name: "TDD" },
+      { name: "Spec-Driven Development" },
+      { name: "Agentic coding workflows" },
     ],
   },
   {
     key: "certifications",
-    skills: [
-      { name: "Lean Six Sigma Yellow Belt" },
-      { name: "AWS Cloud Practitioner", status: "planned" },
-    ],
+    skills: [{ name: "Lean Six Sigma Yellow Belt" }],
   },
 ]
 

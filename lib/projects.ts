@@ -8,6 +8,9 @@ export interface Project {
   github?: string
   demo?: string
   demoSlug?: string
+  caseStudy?: string
+  caseStudyTitle?: string
+  caseStudyTagline?: string
 }
 
 export const projects: Project[] = [
@@ -24,24 +27,28 @@ export const projects: Project[] = [
     demoSlug: "financial-dashboard",
   },
   {
-    title: "Vale Desenvolver 2026",
+    title: "Vale Desenvolver 2026 — Mining Fleet Telemetry",
     description: {
-      en: "Predictive analytics on 37M+ telemetry records from an iron ore mining fleet. Built for Vale's Programa Desenvolver 2026.",
-      pt: "Análise preditiva em 37M+ registros de telemetria de uma frota de mineração de ferro. Construído para o Programa Desenvolver 2026 da Vale.",
+      en: "End-to-end predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Built for Vale's Programa Desenvolver 2026.",
+      pt: "Pipeline preditivo de ponta a ponta para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Construído para o Programa Desenvolver 2026 da Vale.",
     },
-    stack: ["Python", "Pandas", "XGBoost", "SHAP", "DuckDB"],
-  },
-  {
-    title: "PDF Accessibility (Akyou)",
-    description: {
-      en: "Automated PDF accessibility solution using OpenAI API — extracting and restructuring complex document content for end users.",
-      pt: "Solução automatizada de acessibilidade de PDFs usando OpenAI API — extraindo e reestruturando conteúdo de documentos complexos para usuários finais.",
-    },
-    stack: ["Python", "OpenAI API", "LLM Pipelines"],
-    status: "previousWork",
+    stack: ["Python", "Pandas", "XGBoost", "LightGBM", "SHAP", "DuckDB", "scikit-learn", "pytest"],
+    github: "https://github.com/tutorres/Vale_Desenvolver",
+    caseStudy: "vale-desenvolver-2026",
+    caseStudyTitle: "Anticipating Critical Alerts in Mining Fleets",
+    caseStudyTagline:
+      "Predictive maintenance on mining equipment telemetry — from raw data to an explainable model.",
   },
 ]
 
 export function getProjectByDemoSlug(slug: string): Project | undefined {
   return projects.find((p) => p.demoSlug === slug)
+}
+
+export function getProjectByCaseStudy(slug: string): Project | undefined {
+  return projects.find((p) => p.caseStudy === slug)
+}
+
+export function getCaseStudyProjects(): Project[] {
+  return projects.filter((p) => p.caseStudy)
 }

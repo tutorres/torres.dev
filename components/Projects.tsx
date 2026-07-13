@@ -55,13 +55,21 @@ export function Projects({ locale }: ProjectsProps) {
                 </Badge>
               ))}
             </div>
-            {(project.github || project.demo) && (
+            {(project.github || project.demo || project.caseStudy) && (
               <div className="mt-4 flex gap-3">
                 {project.github && (
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="size-4" />
                       {t.projects.viewGithub}
+                    </a>
+                  </Button>
+                )}
+                {project.caseStudy && (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={`/projects/${project.caseStudy}`}>
+                      <ArrowUpRight className="size-4" />
+                      {t.projects.viewCaseStudy}
                     </a>
                   </Button>
                 )}
