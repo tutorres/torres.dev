@@ -47,7 +47,7 @@ export function Hero({ locale }: HeroProps) {
           <Linkedin className="size-5" />
         </a>
         <a
-          href="mailto:arthuroliveiratorres@gmail.com"
+          href="#contact"
           className="text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Email"
         >

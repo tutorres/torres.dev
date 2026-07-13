@@ -107,19 +107,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </Link>
           </div>
 
-          {project.github && (
-            <p className="mt-6 text-sm text-muted-foreground">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-foreground hover:text-muted-foreground transition-colors"
-              >
-                <Github className="h-4 w-4" />
-                View on GitHub
-              </a>
-            </p>
-          )}
+          <p className="mt-6 text-sm text-muted-foreground">
+            <a
+              href={author.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-foreground hover:text-muted-foreground transition-colors"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
+          </p>
         </footer>
       </div>
     </main>
