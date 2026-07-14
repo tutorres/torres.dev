@@ -24,7 +24,7 @@ export const translations = {
       title: "About",
       description: `I build AI-powered systems and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations — LLM agents, Python automations, and data pipelines saving 1.0 FTE in under 5 months.
+Currently at Banco Inter's Global Operations — LLM agents and Python automations saving 1.0 FTE in under 5 months.
 
 Previously at Akyou — end-to-end document intelligence pipeline using OpenAI API.`,
       stack: "Stack",
@@ -96,7 +96,7 @@ Previously at Akyou — end-to-end document intelligence pipeline using OpenAI A
       title: "Sobre",
       description: `Construo sistemas e automações com IA que resolvem problemas operacionais reais.
 
-Atualmente nas Operações Globais do Banco Inter — agentes LLM, automações em Python e pipelines de dados economizando 1,0 FTE em menos de 5 meses.
+Atualmente nas Operações Globais do Banco Inter — agentes LLM e automações em Python economizando 1,0 FTE em menos de 5 meses.
 
 Anteriormente na Akyou — pipeline completo de inteligência documental usando OpenAI API.`,
       stack: "Stack",
