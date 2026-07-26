@@ -14,7 +14,7 @@ export const translations = {
     // Hero
     hero: {
       title: "AI Engineer",
-      tagline: "Production LLM agents & automation — turning operational problems into shipped systems.",
+      tagline: "Production LLM agents & automation. Turning operational problems into shipped systems.",
       location: "Belo Horizonte, Brazil · Open to remote",
       cta: "See projects",
       resume: "Résumé",
@@ -24,9 +24,9 @@ export const translations = {
       title: "About",
       description: `I build AI-powered systems and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations — LLM agents and Python automations saving 1.0 FTE in under 5 months.
+Currently at Banco Inter's Global Operations, building LLM agents and Python automations that saved 1.0 FTE in under 5 months.
 
-Previously at Akyou — end-to-end document intelligence pipeline using OpenAI API.`,
+Previously at Akyou, where I built an end-to-end document intelligence pipeline using the OpenAI API.`,
       stack: "Stack",
     },
     // Experience
@@ -86,7 +86,7 @@ Previously at Akyou — end-to-end document intelligence pipeline using OpenAI A
     // Hero
     hero: {
       title: "Engenheiro de IA",
-      tagline: "Agentes LLM e automação em produção — transformando problemas operacionais em sistemas entregues.",
+      tagline: "Agentes LLM e automação em produção. Transformando problemas operacionais em sistemas entregues.",
       location: "Belo Horizonte, Brasil · Aberto a remoto",
       cta: "Ver projetos",
       resume: "Currículo",
@@ -96,9 +96,9 @@ Previously at Akyou — end-to-end document intelligence pipeline using OpenAI A
       title: "Sobre",
       description: `Construo sistemas e automações com IA que resolvem problemas operacionais reais.
 
-Atualmente nas Operações Globais do Banco Inter — agentes LLM e automações em Python economizando 1,0 FTE em menos de 5 meses.
+Atualmente nas Operações Globais do Banco Inter, construindo agentes LLM e automações em Python que economizaram 1,0 FTE em menos de 5 meses.
 
-Anteriormente na Akyou — pipeline completo de inteligência documental usando OpenAI API.`,
+Anteriormente na Akyou, onde construí um pipeline completo de inteligência documental usando a OpenAI API.`,
       stack: "Stack",
     },
     // Experience
