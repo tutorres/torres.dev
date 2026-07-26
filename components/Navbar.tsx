@@ -1,13 +1,13 @@
 "use client"
 
 import { type Locale, getTranslations } from "@/lib/i18n"
+import { LocaleToggle } from "@/components/LocaleToggle"
 
 interface NavbarProps {
   locale: Locale
-  onLocaleChange: (locale: Locale) => void
 }
 
-export function Navbar({ locale, onLocaleChange }: NavbarProps) {
+export function Navbar({ locale }: NavbarProps) {
   const t = getTranslations(locale)
 
   const navItems = [
@@ -43,19 +43,7 @@ export function Navbar({ locale, onLocaleChange }: NavbarProps) {
             ))}
           </ul>
 
-          <button
-            onClick={() => onLocaleChange(locale === "en" ? "pt" : "en")}
-            className="flex h-8 items-center gap-1 rounded-md border border-border bg-secondary px-2 font-mono text-xs font-medium text-secondary-foreground hover:bg-accent transition-colors"
-            aria-label={locale === "en" ? "Switch to Portuguese" : "Mudar para Inglês"}
-          >
-            <span className={locale === "en" ? "text-foreground" : "text-muted-foreground"}>
-              EN
-            </span>
-            <span className="text-muted-foreground">/</span>
-            <span className={locale === "pt" ? "text-foreground" : "text-muted-foreground"}>
-              PT
-            </span>
-          </button>
+          <LocaleToggle />
         </div>
       </nav>
     </header>

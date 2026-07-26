@@ -1,16 +1,19 @@
+import type { Localized } from "@/lib/i18n"
+
 export type ProjectStatus = "live" | "inDevelopment" | "previousWork"
 
 export interface Project {
   title: string
-  description: { en: string; pt: string }
+  description: Localized<string>
   stack: string[]
   status?: ProjectStatus
   github?: string
   demo?: string
   demoSlug?: string
   caseStudy?: string
-  caseStudyTitle?: string
-  caseStudyTagline?: string
+  caseStudyTitle?: Localized<string>
+  caseStudyTagline?: Localized<string>
+  caseStudyTags?: Localized<string[]>
 }
 
 export const projects: Project[] = [
@@ -35,9 +38,18 @@ export const projects: Project[] = [
     stack: ["Python", "Pandas", "XGBoost", "LightGBM", "SHAP", "DuckDB", "scikit-learn", "pytest"],
     github: "https://github.com/tutorres/Vale_Desenvolver",
     caseStudy: "vale-desenvolver-2026",
-    caseStudyTitle: "Anticipating Critical Alerts in Mining Fleets",
-    caseStudyTagline:
-      "Predictive maintenance on mining equipment telemetry, from raw data to an explainable model.",
+    caseStudyTitle: {
+      en: "Anticipating Critical Alerts in Mining Fleets",
+      pt: "Antecipando Alertas Críticos em Frotas de Mineração",
+    },
+    caseStudyTagline: {
+      en: "Predictive maintenance on mining equipment telemetry, from raw data to an explainable model.",
+      pt: "Manutenção preditiva sobre telemetria de equipamentos de mineração, do dado bruto a um modelo explicável.",
+    },
+    caseStudyTags: {
+      en: ["Predictive Maintenance", "Machine Learning"],
+      pt: ["Manutenção Preditiva", "Machine Learning"],
+    },
   },
 ]
 

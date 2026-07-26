@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
 import { About } from "@/components/About"
@@ -9,14 +8,14 @@ import { Projects } from "@/components/Projects"
 import { Articles } from "@/components/Articles"
 import { Skills } from "@/components/Skills"
 import { Contact } from "@/components/Contact"
-import { type Locale } from "@/lib/i18n"
+import { useLocale } from "@/lib/locale-context"
 
 export default function Home() {
-  const [locale, setLocale] = useState<Locale>("en")
+  const { locale } = useLocale()
 
   return (
     <>
-      <Navbar locale={locale} onLocaleChange={setLocale} />
+      <Navbar locale={locale} />
       <main>
         <Hero locale={locale} />
         <About locale={locale} />

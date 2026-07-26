@@ -14,7 +14,7 @@ export function Articles({ locale }: ArticlesProps) {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString(locale === "en" ? "en-US" : "pt-BR", {
+    return date.toLocaleDateString(t.dateLocale, {
       month: "short",
       day: "numeric",
       year: "numeric",
@@ -46,9 +46,9 @@ export function Articles({ locale }: ArticlesProps) {
                       </span>
                     </div>
                     <h3 className="text-lg font-medium text-foreground group-hover:text-muted-foreground transition-colors">
-                      {article.title}
+                      {article.title[locale]}
                     </h3>
-                    <p className="text-muted-foreground">{article.description}</p>
+                    <p className="text-muted-foreground">{article.description[locale]}</p>
                     <span className="inline-flex items-center gap-1 pt-1 font-mono text-xs text-muted-foreground group-hover:text-foreground transition-colors">
                       {locale === "en" ? "Read" : "Ler"}
                       <ArrowRight className="h-3 w-3" />
