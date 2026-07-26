@@ -32,7 +32,7 @@ export const translations = {
     hero: {
       title: "AI Engineer",
       tagline: "Production LLM agents & automation. Turning operational problems into shipped systems.",
-      location: "Belo Horizonte, Brazil · Open to remote",
+      location: "Belo Horizonte, Brazil",
       cta: "See projects",
       resume: "Résumé",
     },
@@ -41,7 +41,7 @@ export const translations = {
       title: "About",
       description: `I build AI-powered systems and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations, building LLM agents and Python automations that saved 1.0 FTE in under 5 months.
+Currently at Banco Inter's Global Operations, building LLM agents and Python automations that saved 1.4 FTE in 7 months.
 
 Previously at Akyou, where I built an end-to-end document intelligence pipeline using the OpenAI API.`,
       stack: "Stack",
@@ -125,7 +125,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     hero: {
       title: "Engenheiro de IA",
       tagline: "Agentes LLM e automação em produção. Transformando problemas operacionais em sistemas entregues.",
-      location: "Belo Horizonte, Brasil · Aberto a remoto",
+      location: "Belo Horizonte, Brasil",
       cta: "Ver projetos",
       resume: "Currículo",
     },
@@ -134,7 +134,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       title: "Sobre",
       description: `Construo sistemas e automações com IA que resolvem problemas operacionais reais.
 
-Atualmente nas Operações Globais do Banco Inter, construindo agentes LLM e automações em Python que economizaram 1,0 FTE em menos de 5 meses.
+Atualmente nas Operações Globais do Banco Inter, construindo agentes LLM e automações em Python que economizaram 1,4 FTE em 7 meses.
 
 Anteriormente na Akyou, onde construí um pipeline completo de inteligência documental usando a OpenAI API.`,
       stack: "Stack",

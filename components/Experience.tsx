@@ -31,12 +31,12 @@ const experiences: ExperienceItem[] = [
     bullets: {
       en: [
         "Built and deployed LLM agents in production for contextual analysis supporting governance decisions",
-        "Engineered Python automations orchestrating operational workflows, saving 1.0 FTE in under 5 months",
+        "Engineered Python automations orchestrating operational workflows, saving 1.4 FTE across 9 deliveries in 7 months",
         "Deployed automations as containerized microservices on the team's Docker, Kubernetes, and GitLab CI/CD platform",
       ],
       pt: [
         "Construí e coloquei agentes LLM em produção para análise contextual apoiando decisões de governança",
-        "Desenvolvi automações em Python orquestrando workflows operacionais, economizando 1,0 FTE em menos de 5 meses",
+        "Desenvolvi automações em Python orquestrando workflows operacionais, economizando 1,4 FTE em 9 entregas ao longo de 7 meses",
         "Fiz deploy das automações como microsserviços conteinerizados na plataforma de Docker, Kubernetes e GitLab CI/CD do time",
       ],
     },
