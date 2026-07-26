@@ -7,12 +7,25 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+const SITE_URL = 'https://torres-dev-ai.vercel.app'
+
+// Metadata is intentionally English-only. It is consumed by crawlers, search
+// and link previews, not by readers, and the target audience for those is the
+// international market. Page content stays bilingual via the EN/PT toggle.
+// The copy leans on proper nouns and figures so it reads the same either way.
+const SITE_DESCRIPTION =
+  'AI Engineer. Production LLM agents and Python automation at Banco Inter. Predictive maintenance on 37M telemetry records for Vale, code and case study public.'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Arthur Torres · AI Engineer',
-  description: "AI Engineer building production LLM agents, Python automations, and data pipelines. Currently at Banco Inter's Global Operations, with automations saving 1.0 FTE.",
+  description: SITE_DESCRIPTION,
   keywords: ['AI Engineer', 'AI Automation Engineer', 'Applied AI Engineer', 'Forward Deployed Engineer', 'LLM Agents', 'Python', 'FastAPI', 'Automation', 'Docker', 'Kubernetes', 'Arthur Torres'],
   authors: [{ name: 'Arthur Torres' }],
   creator: 'Arthur Torres',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/icon.svg',
     apple: '/apple-icon.png',
@@ -20,15 +33,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://torres.dev',
+    alternateLocale: 'pt_BR',
+    url: SITE_URL,
     title: 'Arthur Torres · AI Engineer',
-    description: 'AI Engineer building production LLM agents, Python automations, and data pipelines. Currently at Banco Inter.',
-    siteName: 'torres.dev',
+    description: SITE_DESCRIPTION,
+    siteName: 'Arthur Torres',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Arthur Torres · AI Engineer',
-    description: 'AI Engineer building production LLM agents, Python automations, and data pipelines. Currently at Banco Inter.',
+    description: SITE_DESCRIPTION,
   },
   robots: {
     index: true,
