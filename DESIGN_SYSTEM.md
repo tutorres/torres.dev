@@ -1,4 +1,4 @@
-# Design System — torres.dev
+# Design System: torres.dev
 
 A reference guide for replicating the visual identity of this project in other applications.
 
@@ -8,7 +8,7 @@ A reference guide for replicating the visual identity of this project in other a
 
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS v4
-- **Component Library:** shadcn/ui — style preset `new-york`, base color `neutral`
+- **Component Library:** shadcn/ui, style preset `new-york`, base color `neutral`
 - **Color Space:** OKLCH throughout (better perceptual uniformity than hex/hsl)
 - **Fonts:** Geist (sans) + Geist Mono (monospace), both from Vercel
 
@@ -78,7 +78,7 @@ All tokens are declared as CSS custom properties and consumed by Tailwind. Value
 | `--input` | `oklch(0.269 0 0)` | `#3f3f3f` |
 | `--ring` | `oklch(0.439 0 0)` | `#707070` |
 
-**Key insight:** the palette is intentionally **monochromatic** — zero chroma (saturation = 0) for all structural colors. Color only appears in status badges and charts.
+**Key insight:** the palette is intentionally **monochromatic**, with zero chroma (saturation = 0) for all structural colors. Color only appears in status badges and charts.
 
 ### Status / Semantic Colors
 
@@ -132,7 +132,7 @@ Base radius variable: `--radius: 0.625rem` (10px).
 
 ## Shadows
 
-Shadows are subtle — used to add depth without drama.
+Shadows are subtle, used to add depth without drama.
 
 | Class | Usage |
 |---|---|
@@ -157,8 +157,8 @@ Shadows are subtle — used to add depth without drama.
 
 ### Easing
 
-- `ease-in-out` — standard for most transitions
-- `ease-linear` — sidebar width transitions
+- `ease-in-out`: standard for most transitions
+- `ease-linear`: sidebar width transitions
 
 ### Motion Patterns (via tw-animate-css)
 
@@ -172,7 +172,7 @@ animate-accordion-up / animate-accordion-down
 animate-caret-blink
 ```
 
-**Rule:** animations are subtle and functional — they communicate state changes, not decoration.
+**Rule:** animations are subtle and functional. They communicate state changes, not decoration.
 
 ---
 
@@ -229,9 +229,9 @@ Four primary variants in use:
 
 | Variant | When to use |
 |---|---|
-| `default` | Primary CTA — dark background, light text |
-| `outline` | Secondary action — border, transparent fill |
-| `ghost` | Tertiary / nav actions — no border, hover only |
+| `default` | Primary CTA: dark background, light text |
+| `outline` | Secondary action: border, transparent fill |
+| `ghost` | Tertiary / nav actions: no border, hover only |
 | `link` | Inline text links with underline |
 
 ### Badges
@@ -265,7 +265,7 @@ pointer-events-none opacity-50
 **Keywords:** clean · professional · technical · high-contrast · restrained · precise
 
 **What this design is:**
-- Neutral gray spectrum — no brand color beyond the content itself
+- Neutral gray spectrum, no brand color beyond the content itself
 - Monospace font for anything "technical" (labels, nav brand, section markers)
 - Glass navbar with backdrop blur as the one structural flourish
 - Generous whitespace; sections breathe rather than crowd
@@ -293,7 +293,7 @@ To clone this aesthetic in a new project:
 - [ ] Set `--radius: 0.625rem` as base radius
 - [ ] Add `bg-background/80 backdrop-blur-sm` to the navbar
 - [ ] Use `max-w-3xl mx-auto px-4` as the universal container
-- [ ] Keep section backgrounds identical — differentiate sections by typography, not color
+- [ ] Keep section backgrounds identical. Differentiate sections by typography, not color
 - [ ] Reserve color (green / yellow / blue) only for semantic status badges
 - [ ] Use `font-mono` for all labels, tags, and technical metadata
 - [ ] Keep animations under 300ms; prefer `fade-in` + `zoom-in-95` for modals

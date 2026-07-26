@@ -90,8 +90,8 @@ export function Projects({ locale }: ProjectsProps) {
                       </DialogTitle>
                       <DialogDescription className="leading-relaxed">
                         {locale === "en"
-                          ? "This app runs on free hosting and may be asleep. If so, Streamlit will show a button asking you to wake it up — just click it and the app will be ready in a few seconds."
-                          : "Este app roda em hospedagem gratuita e pode estar dormindo. Se estiver, o Streamlit vai mostrar um botão pedindo para acordá-lo — é só clicar e o app estará pronto em alguns segundos."}
+                          ? "This app runs on free hosting and may be asleep. If so, Streamlit will show a button asking you to wake it up. Just click it and the app will be ready in a few seconds."
+                          : "Este app roda em hospedagem gratuita e pode estar dormindo. Se estiver, o Streamlit vai mostrar um botão pedindo para acordá-lo. É só clicar e o app estará pronto em alguns segundos."}
                       </DialogDescription>
                       <div className="border-t border-border pt-4">
                         <Button asChild className="w-full">

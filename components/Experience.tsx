@@ -20,12 +20,12 @@ const experiences: ExperienceItem[] = [
   {
     company: "Banco Inter",
     role: {
-      en: "Data & Automation — Global Operations",
-      pt: "Dados & Automação — Operações Globais",
+      en: "Data & Automation · Global Operations",
+      pt: "Dados & Automação · Operações Globais",
     },
     period: {
-      en: "Jan 2026 – Present",
-      pt: "Jan 2026 – Atual",
+      en: "Jan 2026 to Present",
+      pt: "Jan 2026 até Atual",
     },
     stack: ["Python", "FastAPI", "LLM Agents", "Docker", "Kubernetes", "GitLab CI/CD"],
     bullets: {
@@ -44,12 +44,12 @@ const experiences: ExperienceItem[] = [
   {
     company: "Akyou",
     role: {
-      en: "Backend Engineer — AI & Accessibility",
-      pt: "Engenheiro Backend — IA & Acessibilidade",
+      en: "Backend Engineer · AI & Accessibility",
+      pt: "Engenheiro Backend · IA & Acessibilidade",
     },
     period: {
-      en: "Apr 2025 – Dec 2025",
-      pt: "Abr 2025 – Dez 2025",
+      en: "Apr 2025 to Dec 2025",
+      pt: "Abr 2025 a Dez 2025",
     },
     location: {
       en: "Remote",
@@ -59,12 +59,12 @@ const experiences: ExperienceItem[] = [
     bullets: {
       en: [
         "Took a document intelligence product from scratch to a working prototype, owning it end to end",
-        "Built the Python + OpenAI backend and LLM pipelines for unstructured PDF processing — extracting and restructuring complex documents into accessible, structured output",
+        "Built the Python + OpenAI backend and LLM pipelines for unstructured PDF processing, extracting and restructuring complex documents into accessible, structured output",
         "Built the TypeScript frontend from the ground up and deployed the backend on AWS Elastic Beanstalk behind a load balancer",
       ],
       pt: [
         "Levei um produto de inteligência documental do zero a um protótipo funcional, com responsabilidade de ponta a ponta",
-        "Construí o backend em Python + OpenAI e pipelines LLM para processamento de PDFs não estruturados — extraindo e reestruturando documentos complexos em saída acessível e estruturada",
+        "Construí o backend em Python + OpenAI e pipelines LLM para processamento de PDFs não estruturados, extraindo e reestruturando documentos complexos em saída acessível e estruturada",
         "Construí o frontend em TypeScript do zero e fiz deploy do backend no AWS Elastic Beanstalk atrás de um load balancer",
       ],
     },
@@ -99,7 +99,7 @@ export function Experience({ locale }: ExperienceProps) {
               <ul className="space-y-1.5 text-sm text-foreground">
                 {exp.bullets[locale].map((bullet, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="text-muted-foreground">—</span>
+                    <span className="text-muted-foreground">·</span>
                     <span>{bullet}</span>
                   </li>
                 ))}

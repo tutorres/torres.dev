@@ -25,7 +25,7 @@ const Block: FC<{ children: string; lang?: string }> = ({ children, lang }) => (
 )
 
 const Dash: FC = () => (
-  <span className="text-muted-foreground font-mono mt-0.5 shrink-0">—</span>
+  <span className="text-muted-foreground font-mono mt-0.5 shrink-0">·</span>
 )
 
 const B: FC<{ children: ReactNode }> = ({ children }) => (

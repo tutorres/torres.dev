@@ -7,7 +7,7 @@ tags: python, datascience, finance, pandas
 
 In this article I will share my understanding and use of some financial metrics used in my Financial Dashboard project. You can see it in [this link](#) and the full article by clicking [here](#).
 
-The main point here is understanding the math used to transform data from the **bronze layer** — where we have raw information such as date, open, high, low, close, and volume — and aggregate useful data to improve consumption and future use in the data pipeline.
+The main point here is understanding the math used to transform data from the **bronze layer** (where we have raw information such as date, open, high, low, close, and volume) and aggregate useful data to improve consumption and future use in the data pipeline.
 
 ---
 
@@ -41,7 +41,7 @@ close.pct_change()
 
 Moving average shows the average price over the last X days.
 
-**Why?** Individually, they show the direction of the stock — not very powerful alone, but when analyzed together they can provide strong signals. Golden cross and death cross are the most relevant examples.
+**Why?** Individually, they show the direction of the stock. Not very powerful alone, but when analyzed together they can provide strong signals. Golden cross and death cross are the most relevant examples.
 
 The math is:
 
@@ -66,7 +66,7 @@ RSI returns a number between 0 and 100:
 - **70+** → overbought
 - **30-** → oversold
 
-**Why?** It helps analyze market momentum. Sometimes stocks are not priced only by their real value — hype, news, or unexpected events can influence behavior.
+**Why?** It helps analyze market momentum. Sometimes stocks are not priced only by their real value. Hype, news, or unexpected events can influence behavior.
 
 Let's dive into the math:
 
@@ -172,7 +172,7 @@ MACD Histogram = MACD - Signal
 
 ## Fifth metric: Volatility (21-day)
 
-Simple but useful — evaluates the standard deviation of daily returns over the last 21 days. Higher volatility means bigger price oscillations in the period. We use it to set risk/reward accuracy.
+Simple but useful. It evaluates the standard deviation of daily returns over the last 21 days. Higher volatility means bigger price oscillations in the period. We use it to set risk/reward accuracy.
 
 ---
 
@@ -193,6 +193,6 @@ With that, we complete our silver layer.
 
 ## Conclusion
 
-We can create from raw data some really interesting and useful indicators to aggregate information and extract real value from it. Data without purpose is useless — we need to learn how to extract meaning from it.
+We can create from raw data some really interesting and useful indicators to aggregate information and extract real value from it. Data without purpose is useless. We need to learn how to extract meaning from it.
 
 And that's the point of this article: not the math, not the code, but that we can get real-world insights from data. That's what makes this work worthwhile.

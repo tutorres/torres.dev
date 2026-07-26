@@ -9,7 +9,7 @@ const Inline: FC<{ children: string }> = ({ children }) => (
 )
 
 const Dash: FC = () => (
-  <span className="text-muted-foreground font-mono mt-0.5 shrink-0">—</span>
+  <span className="text-muted-foreground font-mono mt-0.5 shrink-0">·</span>
 )
 
 const Figure: FC<{ src: string; alt: string; caption: string }> = ({ src, alt, caption }) => (
