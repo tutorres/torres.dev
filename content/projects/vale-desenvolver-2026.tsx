@@ -66,6 +66,7 @@ interface Copy {
   errors: {
     title: string
     threshold: ReactNode
+    unitNote: ReactNode
     lead: ReactNode
     bullets: ReactNode[]
     closing: ReactNode
@@ -201,8 +202,17 @@ const copy: Record<Locale, Copy> = {
           One label before the numbers: the error analysis is run at <B>threshold 0.7</B>, not at
           the 0.5 used in the section above. The stricter cut buys a little precision for a little
           recall, landing at <B>recall 0.574 and precision 0.126</B>, with 130,705 true positives,
-          907,848 false positives, and 96,918 false negatives against 227,623 real events. Every
+          907,848 false positives, and 96,918 false negatives against 227,623 positive rows. Every
           count below refers to that 0.7 threshold.
+        </>
+      ),
+      unitNote: (
+        <>
+          These are <B>row counts, not distinct events</B>. Each telemetry record inside the 4h
+          window before a Don&apos;t Go is labelled positive, so a single event contributes many
+          positive rows. Row level is the right unit for scoring the classifier, but converting
+          these figures into a count of anticipated stoppages would require deduplicating by event
+          first.
         </>
       ),
       lead: (
@@ -431,8 +441,17 @@ const copy: Record<Locale, Copy> = {
           Um rótulo antes dos números: a análise de erros roda no <B>threshold 0.7</B>, e não no 0.5
           usado na seção acima. O corte mais rígido compra um pouco de precision em troca de um
           pouco de recall, chegando a <B>recall 0.574 e precision 0.126</B>, com 130,705 verdadeiros
-          positivos, 907,848 falsos positivos e 96,918 falsos negativos contra 227,623 eventos
-          reais. Todas as contagens abaixo se referem a esse threshold de 0.7.
+          positivos, 907,848 falsos positivos e 96,918 falsos negativos contra 227,623 linhas
+          positivas. Todas as contagens abaixo se referem a esse threshold de 0.7.
+        </>
+      ),
+      unitNote: (
+        <>
+          São <B>contagens de linha, não de eventos distintos</B>. Cada registro de telemetria dentro
+          da janela de 4h antes de um Don&apos;t Go recebe label positivo, então um único evento
+          gera muitas linhas positivas. Nível de linha é a unidade certa para avaliar o
+          classificador, mas converter esses números em quantidade de paradas antecipadas exigiria
+          deduplicar por evento antes.
         </>
       ),
       lead: (
@@ -598,6 +617,8 @@ export function ValeDesenvolverCaseStudy({ locale }: { locale: Locale }) {
         <h2 className="text-xl font-semibold text-foreground pt-2">{c.errors.title}</h2>
 
         <p className="leading-relaxed">{c.errors.threshold}</p>
+
+        <p className="leading-relaxed text-muted-foreground">{c.errors.unitNote}</p>
 
         <p className="leading-relaxed">{c.errors.lead}</p>
 
