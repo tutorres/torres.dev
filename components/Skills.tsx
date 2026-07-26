@@ -71,7 +71,11 @@ const skillCategories: SkillCategory[] = [
   },
   {
     key: "certifications",
-    skills: [{ name: "Lean Six Sigma Yellow Belt" }],
+    skills: [
+      { name: "Lean Six Sigma Yellow Belt" },
+      { name: "EF SET C1 English — 65/100" },
+      { name: "Claude Code 101" },
+    ],
   },
 ]
 

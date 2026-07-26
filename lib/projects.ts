@@ -22,7 +22,7 @@ export const projects: Project[] = [
     },
     stack: ["Python", "DuckDB", "PyTorch", "Groq API", "Streamlit"],
     status: "live",
-    github: "https://github.com/arthurtorres/financial-dashboard",
+    github: "https://github.com/tutorres/Financial-Intelligence-Dashboard",
     demo: "https://financial-intelligence-dashboard-arthurtorres.streamlit.app",
     demoSlug: "financial-dashboard",
   },
