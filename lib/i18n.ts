@@ -35,6 +35,12 @@ export const translations = {
       location: "Belo Horizonte, Brazil",
       cta: "See projects",
       resume: "Résumé",
+      // Proof line: each item links to the evidence that backs it
+      proof: {
+        agents: "LLM agents in production at Banco Inter",
+        fte: "1.4 FTE saved across 9 deliveries",
+        telemetry: "37M telemetry records modeled",
+      },
     },
     // About
     about: {
@@ -62,6 +68,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
         live: "Live",
         inDevelopment: "In development",
         previousWork: "Previous work",
+        deepDive: "Deep dive",
       },
     },
     // Articles
@@ -104,6 +111,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       kicker: "Case study",
       back: "Back to projects",
       more: "More projects",
+      repository: "Repository",
       writtenBy: "Written by",
       placeholder: "Case study content goes here.",
       notFound: "Project Not Found",
@@ -128,6 +136,12 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       location: "Belo Horizonte, Brasil",
       cta: "Ver projetos",
       resume: "Currículo",
+      // Linha de prova: cada item aponta para a evidência que o sustenta
+      proof: {
+        agents: "Agentes LLM em produção no Banco Inter",
+        fte: "1,4 FTE economizado em 9 entregas",
+        telemetry: "37M registros de telemetria modelados",
+      },
     },
     // About
     about: {
@@ -155,6 +169,7 @@ Anteriormente na Akyou, onde construí um pipeline completo de inteligência doc
         live: "Ativo",
         inDevelopment: "Em desenvolvimento",
         previousWork: "Trabalho anterior",
+        deepDive: "Análise aprofundada",
       },
     },
     // Articles
@@ -197,6 +212,7 @@ Anteriormente na Akyou, onde construí um pipeline completo de inteligência doc
       kicker: "Estudo de caso",
       back: "Voltar aos projetos",
       more: "Mais projetos",
+      repository: "Repositório",
       writtenBy: "Escrito por",
       placeholder: "O conteúdo do estudo de caso vai aqui.",
       notFound: "Projeto não encontrado",

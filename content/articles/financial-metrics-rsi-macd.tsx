@@ -130,17 +130,21 @@ const copy: Record<Locale, Copy> = {
         In this article I will share my understanding and use of some financial metrics used in my
         Financial Dashboard project. You can see it in{" "}
         <a
-          href="#"
+          href="https://financial-intelligence-dashboard-arthurtorres.streamlit.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
         >
           this link
         </a>{" "}
-        and the full article by clicking{" "}
+        and the code on{" "}
         <a
-          href="#"
+          href="https://github.com/tutorres/Financial-Intelligence-Dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
         >
-          here
+          GitHub
         </a>
         . The main point here is understanding the math used to transform data from the bronze
         layer, where we have raw information such as date, open, high, low, close, and volume, and
@@ -323,17 +327,21 @@ const copy: Record<Locale, Copy> = {
         Neste artigo compartilho meu entendimento e uso de algumas métricas financeiras aplicadas no
         meu projeto Financial Dashboard. Você pode vê-lo{" "}
         <a
-          href="#"
+          href="https://financial-intelligence-dashboard-arthurtorres.streamlit.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
         >
           neste link
         </a>{" "}
-        e o artigo completo clicando{" "}
+        e o código no{" "}
         <a
-          href="#"
+          href="https://github.com/tutorres/Financial-Intelligence-Dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
         >
-          aqui
+          GitHub
         </a>
         . O ponto central aqui é entender a matemática usada para transformar os dados da camada
         bronze, onde temos a informação crua como data, abertura, máxima, mínima, fechamento e

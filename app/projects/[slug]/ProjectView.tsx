@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { ArrowLeft, Github } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { getProjectByCaseStudy } from "@/lib/projects"
 import { projectComponents } from "@/content/projects"
 import { author } from "@/lib/author"
@@ -56,6 +57,16 @@ export function ProjectView({ slug }: { slug: string }) {
             ))}
             <span>Arthur Torres</span>
           </div>
+          {project.github && (
+            <div className="mt-5">
+              <Button variant="outline" size="sm" asChild>
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="size-4" />
+                  {t.projectPage.repository}
+                </a>
+              </Button>
+            </div>
+          )}
         </header>
 
         <div className="mt-10">

@@ -34,6 +34,8 @@ const B: FC<{ children: ReactNode }> = ({ children }) => (
   <strong className="font-semibold">{children}</strong>
 )
 
+const REPO_URL = "https://github.com/tutorres/Vale_Desenvolver"
+
 const stack = [
   "Python",
   "pandas",
@@ -310,7 +312,18 @@ const copy: Record<Locale, Copy> = {
       ),
     },
     footnote: (
-      <>Reproducible source code available on GitHub. Dataset not included (proprietary data).</>
+      <>
+        Reproducible source code available on{" "}
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
+        >
+          GitHub
+        </a>
+        . Dataset not included (proprietary data).
+      </>
     ),
   },
   pt: {
@@ -552,7 +565,16 @@ const copy: Record<Locale, Copy> = {
     },
     footnote: (
       <>
-        Código-fonte reprodutível disponível no GitHub. Dataset não incluído (dados proprietários).
+        Código-fonte reprodutível disponível no{" "}
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 hover:text-muted-foreground transition-colors"
+        >
+          GitHub
+        </a>
+        . Dataset não incluído (dados proprietários).
       </>
     ),
   },

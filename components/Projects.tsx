@@ -3,13 +3,6 @@
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog"
 import { type Locale, getTranslations } from "@/lib/i18n"
 import { projects, type ProjectStatus } from "@/lib/projects"
 
@@ -21,6 +14,7 @@ const statusColors: Record<ProjectStatus, string> = {
   live: "bg-green-500/10 text-green-500 border-green-500/20",
   inDevelopment: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
   previousWork: "bg-muted text-muted-foreground border-border",
+  deepDive: "bg-primary/10 text-primary border-primary/20",
 }
 
 export function Projects({ locale }: ProjectsProps) {
@@ -74,35 +68,12 @@ export function Projects({ locale }: ProjectsProps) {
                   </Button>
                 )}
                 {project.demo && (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" size="sm">
-                        <ExternalLink className="size-4" />
-                        {t.projects.viewDemo}
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent showCloseButton className="max-w-sm">
-                      <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                        {locale === "en" ? "Before you go" : "Antes de sair"}
-                      </p>
-                      <DialogTitle className="text-base font-semibold text-foreground">
-                        {project.title}
-                      </DialogTitle>
-                      <DialogDescription className="leading-relaxed">
-                        {locale === "en"
-                          ? "This app runs on free hosting and may be asleep. If so, Streamlit will show a button asking you to wake it up. Just click it and the app will be ready in a few seconds."
-                          : "Este app roda em hospedagem gratuita e pode estar dormindo. Se estiver, o Streamlit vai mostrar um botão pedindo para acordá-lo. É só clicar e o app estará pronto em alguns segundos."}
-                      </DialogDescription>
-                      <div className="border-t border-border pt-4">
-                        <Button asChild className="w-full">
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                            {locale === "en" ? "Open application" : "Abrir aplicação"}
-                            <ArrowUpRight className="size-4" />
-                          </a>
-                        </Button>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="size-4" />
+                      {t.projects.viewDemo}
+                    </a>
+                  </Button>
                 )}
               </div>
             )}
