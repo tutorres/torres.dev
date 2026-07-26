@@ -27,7 +27,7 @@ export const projects: Project[] = [
     demoSlug: "financial-dashboard",
   },
   {
-    title: "Vale Desenvolver 2026 — Mining Fleet Telemetry",
+    title: "Vale Desenvolver 2026: Mining Fleet Telemetry",
     description: {
       en: "End-to-end predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Built for Vale's Programa Desenvolver 2026.",
       pt: "Pipeline preditivo de ponta a ponta para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Construído para o Programa Desenvolver 2026 da Vale.",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     caseStudy: "vale-desenvolver-2026",
     caseStudyTitle: "Anticipating Critical Alerts in Mining Fleets",
     caseStudyTagline:
-      "Predictive maintenance on mining equipment telemetry — from raw data to an explainable model.",
+      "Predictive maintenance on mining equipment telemetry, from raw data to an explainable model.",
   },
 ]
 

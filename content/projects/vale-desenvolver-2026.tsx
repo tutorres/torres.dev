@@ -47,8 +47,8 @@ export function ValeDesenvolverCaseStudy() {
       </p>
 
       <blockquote className="border-l-2 border-border pl-4 text-sm italic leading-relaxed text-muted-foreground">
-        The data is proprietary and is not redistributed. This case describes the technical
-        approach; the quantitative results remain in the challenge report.
+        The dataset is proprietary and is not redistributed. The code, the methodology, and the
+        results are public.
       </blockquote>
 
       <hr className="border-t border-border" />
@@ -71,14 +71,14 @@ export function ValeDesenvolverCaseStudy() {
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Real scale</strong> — tens of millions of telemetry
+              <strong className="font-semibold">Real scale:</strong> tens of millions of telemetry
               records, processed on a commodity machine, which demanded careful memory engineering.
             </span>
           </li>
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Rare events</strong> — Don&apos;t Go alerts are
+              <strong className="font-semibold">Rare events:</strong> Don&apos;t Go alerts are
               highly imbalanced, which makes accuracy misleading and requires specific metrics and
               strategies.
             </span>
@@ -100,7 +100,7 @@ export function ValeDesenvolverCaseStudy() {
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Data quality diagnosis and cleaning</strong> —
+              <strong className="font-semibold">Data quality diagnosis and cleaning:</strong>{" "}
               identifying and correcting real issues (encoding corruption, null values masked as
               text, inconsistent decimal separators), with documented change control
               (before/after + rationale).
@@ -109,7 +109,7 @@ export function ValeDesenvolverCaseStudy() {
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Temporal feature engineering</strong> — alarm counts
+              <strong className="font-semibold">Temporal feature engineering:</strong> alarm counts
               across multiple sliding windows, time since the last critical event, and equipment
               type, all computed in a vectorized way and{" "}
               <strong className="font-semibold">with no temporal leakage</strong>.
@@ -118,10 +118,10 @@ export function ValeDesenvolverCaseStudy() {
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Comparative modeling</strong> — reference baselines,
+              <strong className="font-semibold">Comparative modeling:</strong> reference baselines,
               a main gradient boosting model, and a second approach to cross-validate results, all
               evaluated on the <strong className="font-semibold">same temporal split</strong> (train
-              on the past, test on the future — never random).
+              on the past, test on the future, never random).
             </span>
           </li>
           <li className="flex gap-2.5 text-sm">
@@ -134,7 +134,7 @@ export function ValeDesenvolverCaseStudy() {
           <li className="flex gap-2.5 text-sm">
             <Dash />
             <span>
-              <strong className="font-semibold">Explainability and error analysis</strong> — SHAP to
+              <strong className="font-semibold">Explainability and error analysis:</strong> SHAP to
               interpret the model and a critical analysis of where and when it fails (including
               temporal drift detection).
             </span>
@@ -144,15 +144,132 @@ export function ValeDesenvolverCaseStudy() {
 
       <hr className="border-t border-border" />
 
+      {/* ===== RESULTS ===== */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-semibold text-foreground pt-2">Results</h2>
+
+        <p className="leading-relaxed">
+          Don&apos;t Go events are rare: only 1.6% of the test window is positive. In that regime a
+          low absolute F1 is the expected outcome, not a failure, and the honest question is not
+          &quot;is F1 high?&quot; but{" "}
+          <strong className="font-semibold">
+            &quot;how much better is this than what operations could do without a model?&quot;
+          </strong>{" "}
+          So the reference point is the best rule-based heuristic, not a perfect classifier.
+        </p>
+
+        <p className="leading-relaxed">
+          Every number below comes from the same temporal split: trained on January to April
+          (23,273,520 rows) and tested on May and June (13,890,534 rows), predicting a Don&apos;t Go
+          event within the next 4 hours (<Inline>label_4h</Inline>).
+        </p>
+
+        <ul className="space-y-2 pl-1">
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">XGBoost (selected model):</strong> F1 0.186,
+              precision 0.111, recall 0.577, AUC-ROC 0.767, AUC-PR 0.205.
+            </span>
+          </li>
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Best heuristic baseline</strong> (
+              <Inline>critical_1h &gt; 0</Inline>): F1 0.038.
+            </span>
+          </li>
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Gain: 4.9x the F1 of the best heuristic</strong>, and
+              an AUC-PR 12.5x the base rate of the event. Both comparisons are the ones that
+              actually matter operationally.
+            </span>
+          </li>
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Cross-check:</strong> LightGBM, trained
+              independently as a second approach, landed at F1 0.185. Two different algorithms
+              converging on the same number is evidence that the result comes from the features and
+              the split, not from one lucky model.
+            </span>
+          </li>
+        </ul>
+
+        <p className="leading-relaxed">
+          Recall was the deliberate priority. Catching 57.7% of the events at 11.1% precision means
+          most alerts will not turn into a stop, and that trade is only defensible because the two
+          errors do not cost the same. The next section is where that gets pulled apart.
+        </p>
+      </section>
+
+      <hr className="border-t border-border" />
+
+      {/* ===== ERROR ANALYSIS ===== */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-semibold text-foreground pt-2">
+          Error Analysis: Where the Model Breaks
+        </h2>
+
+        <p className="leading-relaxed">
+          A model that only reports its wins is not auditable. Breaking the 96,918 false negatives
+          down by month, equipment type, and alarm volume turned out to be the most useful part of
+          the project, because it says precisely where the model can be trusted and where it cannot.
+          The two error types are not interchangeable in the field: a false negative is a
+          Don&apos;t Go that was never anticipated, so an unplanned stop, while a false positive is
+          an alert with no Don&apos;t Go behind it, so an unnecessary inspection.
+        </p>
+
+        <ul className="space-y-2 pl-1">
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Temporal drift:</strong> recall is 0.423 in May
+              against 0.922 in June. The same model, on two consecutive months of the same test
+              window, behaves like two different models. Anything shipped on this data needs
+              monitoring and periodic retraining, not a one-off fit.
+            </span>
+          </li>
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Bias by equipment type:</strong> of the 96,918 false
+              negatives, 94,932 are excavators against 1,986 trucks. Almost every miss is an
+              excavator, which lines up with what SHAP had already shown: the model leans on a
+              baseline risk per equipment type instead of on the dynamic alarm pattern.
+            </span>
+          </li>
+          <li className="flex gap-2.5 text-sm">
+            <Dash />
+            <span>
+              <strong className="font-semibold">Concentration in noisy regimes:</strong> 96,869 of
+              the 96,918 false negatives sit in the band of 21 or more alarms in 4 hours. Once the
+              equipment is already alarming heavily, the counts saturate and stop discriminating, so
+              the misses pile up exactly where an operator would most want a second opinion.
+            </span>
+          </li>
+        </ul>
+
+        <p className="leading-relaxed">
+          None of this is solved by moving a threshold. It points at a concrete next iteration:
+          features that separate signal inside high-alarm regimes, and calibration per equipment
+          type rather than a single global model.
+        </p>
+      </section>
+
+      <hr className="border-t border-border" />
+
       {/* ===== EXPLAINABILITY ===== */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground pt-2">
-          Explainability — What the Model Actually Learned
+          Explainability: What the Model Actually Learned
         </h2>
 
         <p className="leading-relaxed">
           Instead of treating the model as a black box, I used SHAP to understand which signals drive
-          the predictions — and to honestly expose a limitation: the model leans more on a baseline
+          the predictions, and to honestly expose a limitation: the model leans more on a baseline
           risk per equipment type than on the fine-grained dynamic alarm pattern that precedes a
           failure. This kind of critical reading is what separates &quot;a model that runs&quot; from
           &quot;a model that is understood&quot;.
@@ -170,7 +287,7 @@ export function ValeDesenvolverCaseStudy() {
       {/* ===== EXPLORATORY ANALYSIS ===== */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground pt-2">
-          Exploratory Analysis — Relationships Between Variables
+          Exploratory Analysis: Relationships Between Variables
         </h2>
 
         <p className="leading-relaxed">
@@ -198,7 +315,7 @@ export function ValeDesenvolverCaseStudy() {
             <span>
               <strong className="font-semibold">Engineering matters as much as the model.</strong>{" "}
               Much of the effort went into making the pipeline viable at real scale (data type and
-              memory optimization) — a problem that only shows up outside the toy dataset.
+              memory optimization), a problem that only shows up outside the toy dataset.
             </span>
           </li>
           <li className="flex gap-2.5 text-sm">
