@@ -29,3 +29,5 @@ yarn-error.log*
 # OS / editor
 Thumbs.db
 desktop.ini
+# Agent worktrees
+.claude/worktrees/

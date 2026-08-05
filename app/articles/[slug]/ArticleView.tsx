@@ -90,7 +90,7 @@ export function ArticleView({ slug }: { slug: string }) {
             </Link>
           </div>
 
-          {(article.mediumUrl || article.substackUrl) && (
+          {(article.mediumUrl || article.substackUrl || article.devtoUrl) && (
             <p className="mt-6 text-sm text-muted-foreground">
               {t.articlePage.alsoPublishedOn}{" "}
               {article.mediumUrl && (
@@ -112,6 +112,17 @@ export function ArticleView({ slug }: { slug: string }) {
                   className="text-foreground hover:text-muted-foreground transition-colors"
                 >
                   Substack
+                </a>
+              )}
+              {(article.mediumUrl || article.substackUrl) && article.devtoUrl && " · "}
+              {article.devtoUrl && (
+                <a
+                  href={article.devtoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-muted-foreground transition-colors"
+                >
+                  Dev.to
                 </a>
               )}
             </p>
