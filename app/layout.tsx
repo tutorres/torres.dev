@@ -3,12 +3,11 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LocaleProvider } from '@/lib/locale-context'
 import { PersonJsonLd } from '@/components/JsonLd'
+import { SITE_URL } from '@/lib/site'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
-const SITE_URL = 'https://torres-dev-ai.vercel.app'
 
 // Metadata is intentionally English-only. It is consumed by crawlers, search
 // and link previews, not by readers, and the target audience for those is the
