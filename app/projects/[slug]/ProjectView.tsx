@@ -84,7 +84,7 @@ export function ProjectView({ slug }: { slug: string }) {
                 {t.projectPage.writtenBy}
               </p>
               <p className="mt-2 font-medium text-foreground">{author.name}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{author.bio}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{author.bio[locale]}</p>
             </div>
             <Link
               href="/#projects"

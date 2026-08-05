@@ -1,6 +1,7 @@
 "use client"
 
-import { Github, Linkedin, Mail } from "lucide-react"
+import { FileText, Github, Linkedin, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { type Locale, getTranslations } from "@/lib/i18n"
 
 interface ContactProps {
@@ -49,6 +50,14 @@ export function Contact({ locale }: ContactProps) {
             <span className="font-mono text-sm">{link.display}</span>
           </a>
         ))}
+      </div>
+      <div className="mt-8">
+        <Button asChild variant="outline" size="sm">
+          <a href="/arthur_torres_cv.pdf" target="_blank" rel="noopener noreferrer">
+            <FileText className="size-4" />
+            {t.contact.resume}
+          </a>
+        </Button>
       </div>
       <p className="mt-12 text-center font-mono text-xs text-muted-foreground">
         © {new Date().getFullYear()} Arthur Torres

@@ -26,11 +26,20 @@ const skillCategories: SkillCategory[] = [
     key: "aiml",
     skills: [
       { name: "LLM Agents" },
+      { name: "MCP" },
+      { name: "Tool design" },
+      { name: "System prompt design" },
+      { name: "LLM evaluation" },
       { name: "RAG" },
       { name: "OpenAI / Groq API" },
+    ],
+  },
+  {
+    key: "ml",
+    skills: [
       { name: "PyTorch" },
-      { name: "LSTM" },
       { name: "XGBoost / LightGBM" },
+      { name: "LSTM" },
       { name: "SHAP" },
     ],
   },

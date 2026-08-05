@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, MapPin, FileText } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { type Locale, getTranslations } from "@/lib/i18n"
 
@@ -84,12 +84,6 @@ export function Hero({ locale }: HeroProps) {
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <Button asChild size="lg">
           <a href="#projects">{t.hero.cta}</a>
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <a href="/arthur_torres_cv.pdf" target="_blank" rel="noopener noreferrer">
-            <FileText className="size-4" />
-            {t.hero.resume}
-          </a>
         </Button>
       </div>
     </section>
