@@ -10,6 +10,7 @@ interface AboutProps {
 const stackItems = [
   "Python",
   "LLM Agents",
+  "MCP",
   "FastAPI",
   "OpenAI API",
   "Groq",

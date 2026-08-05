@@ -31,10 +31,9 @@ export const translations = {
     // Hero
     hero: {
       title: "AI Engineer",
-      tagline: "Production LLM agents & automation. Turning operational problems into shipped systems.",
-      location: "Belo Horizonte, Brazil",
+      tagline: "Production LLM agents in regulated finance. I design the system prompts, tools and MCP integrations that turn operational problems into shipped systems.",
+      location: "Belo Horizonte, Brazil (UTC-3)",
       cta: "See projects",
-      resume: "Résumé",
       // Proof line: each item links to the evidence that backs it
       proof: {
         agents: "LLM agents in production at Banco Inter",
@@ -45,9 +44,11 @@ export const translations = {
     // About
     about: {
       title: "About",
-      description: `I build AI-powered systems and automations that solve real operational problems.
+      description: `I build LLM agents and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations, building LLM agents and Python automations that saved 1.4 FTE in 7 months.
+Currently at Banco Inter's Global Operations, where I design the system prompts, tools and MCP integrations behind agents running in production, plus the Python automations around them. Together they saved 1.4 FTE in 7 months.
+
+Working inside a bank means every agent ships under audit, access and governance constraints, so I care as much about evaluation and guardrails as about the prompt.
 
 Previously at Akyou, where I built an end-to-end document intelligence pipeline using the OpenAI API.`,
       stack: "Stack",
@@ -57,6 +58,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       title: "Experience",
       present: "Present",
       remote: "Remote",
+      education: "Education",
     },
     // Projects
     projects: {
@@ -82,6 +84,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       categories: {
         languages: "Languages",
         aiml: "AI & LLM",
+        ml: "ML & Modeling",
         data: "Data",
         infra: "Infrastructure",
         tools: "Tools",
@@ -95,6 +98,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     contact: {
       title: "Contact",
       email: "Email",
+      resume: "Résumé (PDF)",
     },
     // Article detail page chrome
     articlePage: {
@@ -132,10 +136,9 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     // Hero
     hero: {
       title: "Engenheiro de IA",
-      tagline: "Agentes LLM e automação em produção. Transformando problemas operacionais em sistemas entregues.",
-      location: "Belo Horizonte, Brasil",
+      tagline: "Agentes LLM em produção no setor financeiro regulado. Desenho os system prompts, as tools e as integrações MCP que transformam problemas operacionais em sistemas entregues.",
+      location: "Belo Horizonte, Brasil (UTC-3)",
       cta: "Ver projetos",
-      resume: "Currículo",
       // Linha de prova: cada item aponta para a evidência que o sustenta
       proof: {
         agents: "Agentes LLM em produção no Banco Inter",
@@ -146,9 +149,11 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     // About
     about: {
       title: "Sobre",
-      description: `Construo sistemas e automações com IA que resolvem problemas operacionais reais.
+      description: `Construo agentes LLM e automações que resolvem problemas operacionais reais.
 
-Atualmente nas Operações Globais do Banco Inter, construindo agentes LLM e automações em Python que economizaram 1,4 FTE em 7 meses.
+Atualmente nas Operações Globais do Banco Inter, onde desenho os system prompts, as tools e as integrações MCP por trás de agentes rodando em produção, além das automações em Python ao redor deles. Juntos, economizaram 1,4 FTE em 7 meses.
+
+Trabalhar dentro de um banco significa que todo agente entra em produção sob restrições de auditoria, acesso e governança. Por isso me preocupo tanto com avaliação e guardrails quanto com o prompt.
 
 Anteriormente na Akyou, onde construí um pipeline completo de inteligência documental usando a OpenAI API.`,
       stack: "Stack",
@@ -158,6 +163,7 @@ Anteriormente na Akyou, onde construí um pipeline completo de inteligência doc
       title: "Experiência",
       present: "Atual",
       remote: "Remoto",
+      education: "Formação",
     },
     // Projects
     projects: {
@@ -183,6 +189,7 @@ Anteriormente na Akyou, onde construí um pipeline completo de inteligência doc
       categories: {
         languages: "Linguagens",
         aiml: "IA & LLM",
+        ml: "ML & Modelagem",
         data: "Dados",
         infra: "Infraestrutura",
         tools: "Ferramentas",
@@ -196,6 +203,7 @@ Anteriormente na Akyou, onde construí um pipeline completo de inteligência doc
     contact: {
       title: "Contato",
       email: "Email",
+      resume: "Currículo (PDF)",
     },
     // Article detail page chrome
     articlePage: {
