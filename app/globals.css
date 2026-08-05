@@ -123,3 +123,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Decorative orbit in the hero. Keyframes live here rather than in a <style>
+   tag inside the component: React 19 hoists inline <style> to <head>, which
+   makes the server and client trees differ and trips a hydration warning. */
+@keyframes tech-orbit-spin {
+  from { transform: rotate(var(--start)); }
+  to   { transform: rotate(calc(var(--start) + 360deg)); }
+}
+
+/* Keeps each badge upright while its arm sweeps around the ring. */
+@keyframes tech-orbit-upright {
+  from { transform: rotate(calc(var(--start) * -1)); }
+  to   { transform: rotate(calc((var(--start) * -1) - 360deg)); }
+}
+
+@keyframes tech-orbit-sphere {
+  from { transform: rotateX(-12deg) rotateY(0deg); }
+  to   { transform: rotateX(-12deg) rotateY(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-orbit-animated {
+    animation: none !important;
+  }
+}
+
+/* Slow breath on the whole orbit so it reads as ambient rather than as a widget. */
+@keyframes tech-orbit-breathe {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}

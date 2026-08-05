@@ -49,21 +49,23 @@ export function Projects({ locale }: ProjectsProps) {
                 </Badge>
               ))}
             </div>
+            {/* The case study is the strongest asset on the site, so it leads and
+                carries the only filled button. Repo and demo stay secondary. */}
             {(project.github || project.demo || project.caseStudy) && (
-              <div className="mt-4 flex gap-3">
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                {project.caseStudy && (
+                  <Button size="sm" asChild>
+                    <a href={`/projects/${project.caseStudy}`}>
+                      <ArrowUpRight className="size-4" />
+                      {t.projects.viewCaseStudy}
+                    </a>
+                  </Button>
+                )}
                 {project.github && (
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="size-4" />
                       {t.projects.viewGithub}
-                    </a>
-                  </Button>
-                )}
-                {project.caseStudy && (
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={`/projects/${project.caseStudy}`}>
-                      <ArrowUpRight className="size-4" />
-                      {t.projects.viewCaseStudy}
                     </a>
                   </Button>
                 )}

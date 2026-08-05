@@ -3,6 +3,7 @@
 import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { type Locale, getTranslations } from "@/lib/i18n"
+import { TechOrbit } from "@/components/ui/tech-orbit"
 
 interface HeroProps {
   locale: Locale
@@ -19,7 +20,10 @@ export function Hero({ locale }: HeroProps) {
   ]
 
   return (
-    <section className="flex min-h-[55vh] flex-col items-center justify-center px-4 pt-14 text-center">
+    <section className="relative isolate flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 pt-14 text-center">
+      {/* Decorative. Sits behind the copy so the proof line stays above the fold. */}
+      <TechOrbit />
+
       <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Arthur Torres
       </h1>
