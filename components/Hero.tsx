@@ -12,11 +12,13 @@ interface HeroProps {
 export function Hero({ locale }: HeroProps) {
   const t = getTranslations(locale)
 
-  // Each claim links to the evidence that backs it.
+  // Each claim links to the evidence that backs it. The two checkable ones point
+  // at the case study; the bank claim, which nobody outside can verify, is last
+  // and supporting rather than first and load bearing.
   const proofPoints = [
-    { label: t.hero.proof.agents, href: "#experience" },
-    { label: t.hero.proof.fte, href: "#experience" },
-    { label: t.hero.proof.telemetry, href: "/projects/vale-desenvolver-2026" },
+    { label: t.hero.proof.result, href: "/projects/vale-desenvolver-2026" },
+    { label: t.hero.proof.honesty, href: "/projects/vale-desenvolver-2026" },
+    { label: t.hero.proof.production, href: "#experience" },
   ]
 
   return (
@@ -87,7 +89,7 @@ export function Hero({ locale }: HeroProps) {
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <Button asChild size="lg">
-          <a href="#projects">{t.hero.cta}</a>
+          <a href="/projects/vale-desenvolver-2026">{t.hero.cta}</a>
         </Button>
       </div>
     </section>
