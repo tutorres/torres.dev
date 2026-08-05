@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { getArticleBySlug, getAllArticles } from "@/lib/articles"
 import { translations } from "@/lib/i18n"
+import { BlogPostingJsonLd } from "@/components/JsonLd"
 import { ArticleView } from "./ArticleView"
 
 interface ArticlePageProps {
@@ -47,5 +48,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound()
   }
 
-  return <ArticleView slug={slug} />
+  // Structured data mirrors the metadata above: English copy, since it is read
+  // by crawlers at build time and no locale is known yet.
+  return (
+    <>
+      <BlogPostingJsonLd
+        slug={article.slug}
+        headline={article.title.en}
+        description={article.description.en}
+        datePublished={article.date}
+      />
+      <ArticleView slug={slug} />
+    </>
+  )
 }
