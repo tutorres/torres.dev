@@ -48,6 +48,12 @@ type Orbit = {
   icons: { slug: string; label: string; angle: number }[]
 }
 
+/**
+ * The rings mirror the argument the hero makes. Inner ring is what everything is
+ * written in, middle is the agent side, outer is the evaluation side. Kubernetes
+ * and OpenAI were dropped: he coexists with the former rather than owning it, and
+ * two model vendors in a decorative orbit is redundant.
+ */
 const orbits: Orbit[] = [
   {
     size: "size-[24rem] sm:size-[38rem]",
@@ -70,9 +76,11 @@ const orbits: Orbit[] = [
     size: "size-[40rem] sm:size-[62rem]",
     duration: 44,
     icons: [
-      { slug: "docker", label: "Docker", angle: -45 },
-      { slug: "kubernetes", label: "Kubernetes", angle: 45 },
-      { slug: "openai", label: "OpenAI", angle: 180 },
+      { slug: "pandas", label: "pandas", angle: -70 },
+      { slug: "scikitlearn", label: "scikit-learn", angle: 0 },
+      { slug: "pytest", label: "pytest", angle: 70 },
+      { slug: "duckdb", label: "DuckDB", angle: 180 },
+      { slug: "docker", label: "Docker", angle: -140 },
     ],
   },
 ]
