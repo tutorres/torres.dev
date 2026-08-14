@@ -16,7 +16,7 @@ export function Hero({ locale }: HeroProps) {
   // at the case study; the bank claim, which nobody outside can verify, is last
   // and supporting rather than first and load bearing.
   const proofPoints = [
-    { label: t.hero.proof.result, href: "/projects/vale-desenvolver-2026" },
+    { label: t.hero.proof.result, href: "#experience" },
     { label: t.hero.proof.honesty, href: "/projects/vale-desenvolver-2026" },
     { label: t.hero.proof.production, href: "#experience" },
   ]

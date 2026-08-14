@@ -31,18 +31,20 @@ export const translations = {
     // Hero
     hero: {
       title: "AI Engineer",
-      // The thesis is deliberately falsifiable. Everything the bank work can
-      // claim is unverifiable by law, so the headline leads with the evidence a
-      // stranger can open and check instead.
-      tagline: "I build AI systems and show how I know they work. Temporal splits, honest baselines, and error analysis that names what the model gets wrong.",
+      // Leads with outcome, not method. An earlier version led with "show how I
+      // know they work", which answers a doubt the reader has not raised yet and
+      // reads as self-justification. "Measure what they change" says the same
+      // thing from a position of confidence: I quantify impact, rather than I
+      // prove myself.
+      tagline: "I ship LLM agents and ML models into production and measure what they change.",
       location: "Belo Horizonte, Brazil (UTC-3)",
       cta: "Read the case study",
-      // Proof line: each item links to the evidence that backs it. Results, not
-      // volumes: "37M records" alone is a brag with no outcome attached.
+      // Results, never volumes. "37M records modeled" is a brag with no outcome
+      // attached; "4.9x the heuristic" is a number someone can argue with.
       proof: {
-        result: "4.9x the operational heuristic on 37M mining records",
-        honesty: "Error analysis that documents my own model's limits",
-        production: "LLM agents in production at a regulated bank",
+        result: "1.4 full-time roles of manual work removed at a bank",
+        honesty: "4.9x the operational heuristic on 37M mining records",
+        production: "LLM agents in production under audit constraints",
       },
     },
     // About
@@ -140,18 +142,20 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     // Hero
     hero: {
       title: "Engenheiro de IA",
-      // A tese é falsificável de propósito. O que o trabalho no banco pode
-      // alegar é inverificável por lei, então a headline lidera com a evidência
-      // que um estranho consegue abrir e conferir.
-      tagline: "Construo sistemas de IA e mostro como sei que funcionam. Split temporal, baselines honestos, e análise de erro que nomeia o que o modelo erra.",
+      // Lidera por resultado, não por método. A versão anterior liderava com
+      // "mostro como sei que funcionam", que responde a uma dúvida que o leitor
+      // ainda não levantou e soa como autojustificativa. "Meço o que mudam" diz
+      // o mesmo de um lugar confiante: eu quantifico impacto, em vez de eu me
+      // provo.
+      tagline: "Coloco agentes LLM e modelos de ML em produção e meço o que eles mudam.",
       location: "Belo Horizonte, Brasil (UTC-3)",
       cta: "Ler o case study",
-      // Linha de prova: cada item aponta para a evidência que o sustenta.
-      // Resultado, não volume: "37M registros" sozinho é vaidade sem desfecho.
+      // Resultado, nunca volume. "37M registros modelados" é vaidade sem
+      // desfecho; "4,9x a heurística" é um número com que dá para discordar.
       proof: {
-        result: "4,9x a heurística operacional em 37M registros de mineração",
-        honesty: "Análise de erro que documenta os limites do meu próprio modelo",
-        production: "Agentes LLM em produção em banco regulado",
+        result: "1,4 FTE de trabalho manual eliminado num banco",
+        honesty: "4,9x a heurística operacional em 37M registros de mineração",
+        production: "Agentes LLM em produção sob restrição de auditoria",
       },
     },
     // About
