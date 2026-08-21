@@ -14,11 +14,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 // international market. Page content stays bilingual via the EN/PT toggle.
 // The copy leans on proper nouns and figures so it reads the same either way.
 const SITE_DESCRIPTION =
-  'AI Engineer. Production LLM agents at Banco Inter: system prompts, tool design and MCP integrations in regulated finance. Predictive maintenance on 37M telemetry records for Vale, code and case study public.'
+  'Applied AI Engineer. Production LLM agents at Banco Inter: system prompts, tool design and MCP integrations in regulated finance. Predictive maintenance on 37M telemetry records in an open Vale challenge, code and case study public. Undergraduate research at CEFET-MG on LLM models for market prediction and financial risk.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Arthur Torres · AI Engineer',
+  title: 'Arthur Torres · Applied AI Engineer',
   description: SITE_DESCRIPTION,
   keywords: ['AI Engineer', 'AI Automation Engineer', 'Applied AI Engineer', 'Forward Deployed Engineer', 'LLM Agents', 'MCP', 'Model Context Protocol', 'Tool design', 'LLM evaluation', 'Python', 'FastAPI', 'Automation', 'Docker', 'Kubernetes', 'Arthur Torres'],
   authors: [{ name: 'Arthur Torres' }],
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'pt_BR',
     url: SITE_URL,
-    title: 'Arthur Torres · AI Engineer',
+    title: 'Arthur Torres · Applied AI Engineer',
     description: SITE_DESCRIPTION,
     siteName: 'Arthur Torres',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Arthur Torres · AI Engineer',
+    title: 'Arthur Torres · Applied AI Engineer',
     description: SITE_DESCRIPTION,
   },
   robots: {

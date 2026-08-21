@@ -30,7 +30,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      title: "AI Engineer",
+      title: "Applied AI Engineer",
       // Leads with outcome, not method. An earlier version led with "show how I
       // know they work", which answers a doubt the reader has not raised yet and
       // reads as self-justification. "Measure what they change" says the same
@@ -42,7 +42,7 @@ export const translations = {
       // Results, never volumes. "37M records modeled" is a brag with no outcome
       // attached; "4.9x the heuristic" is a number someone can argue with.
       proof: {
-        result: "1.4 full-time roles of manual work removed at a bank",
+        result: "Nine automations shipped at a bank in seven months",
         honesty: "4.9x the operational heuristic on 37M mining records",
         production: "LLM agents in production under audit constraints",
       },
@@ -52,9 +52,11 @@ export const translations = {
       title: "About",
       description: `I build LLM agents and automations that solve real operational problems.
 
-Currently at Banco Inter's Global Operations, where I design the system prompts, tools and MCP integrations behind agents running in production, plus the Python automations around them. Together they saved 1.4 FTE in 7 months.
+Currently at Banco Inter's Global Operations, where I design the system prompts, tools and MCP integrations behind agents running in production, plus the Python automations around them. Nine of those shipped in seven months.
 
 Working inside a bank means every agent ships under audit, access and governance constraints, so I care as much about evaluation and guardrails as about the prompt.
+
+Alongside that I do undergraduate research at CEFET-MG on hybrid LLM models for market prediction and financial risk, where the point is benchmarking the combined method against each approach on its own rather than reporting one number in isolation.
 
 Previously at Akyou, where I built an end-to-end document intelligence pipeline using the OpenAI API.`,
       stack: "Stack",
@@ -141,7 +143,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     },
     // Hero
     hero: {
-      title: "Engenheiro de IA",
+      title: "Applied AI Engineer",
       // Lidera por resultado, não por método. A versão anterior liderava com
       // "mostro como sei que funcionam", que responde a uma dúvida que o leitor
       // ainda não levantou e soa como autojustificativa. "Meço o que mudam" diz
@@ -153,7 +155,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       // Resultado, nunca volume. "37M registros modelados" é vaidade sem
       // desfecho; "4,9x a heurística" é um número com que dá para discordar.
       proof: {
-        result: "1,4 FTE de trabalho manual eliminado num banco",
+        result: "Nove automações entregues num banco em sete meses",
         honesty: "4,9x a heurística operacional em 37M registros de mineração",
         production: "Agentes LLM em produção sob restrição de auditoria",
       },
@@ -163,9 +165,11 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       title: "Sobre",
       description: `Construo agentes LLM e automações que resolvem problemas operacionais reais.
 
-Atualmente nas Operações Globais do Banco Inter, onde desenho os system prompts, as tools e as integrações MCP por trás de agentes rodando em produção, além das automações em Python ao redor deles. Juntos, economizaram 1,4 FTE em 7 meses.
+Atualmente nas Operações Globais do Banco Inter, onde desenho os system prompts, as tools e as integrações MCP por trás de agentes rodando em produção, além das automações em Python ao redor deles. Nove delas entraram em produção em sete meses.
 
 Trabalhar dentro de um banco significa que todo agente entra em produção sob restrições de auditoria, acesso e governança. Por isso me preocupo tanto com avaliação e guardrails quanto com o prompt.
+
+Em paralelo, faço iniciação científica no CEFET-MG sobre modelos híbridos de LLM para previsão de mercado e risco financeiro, onde o ponto é comparar o método combinado contra cada abordagem isolada, em vez de reportar um número sozinho.
 
 Anteriormente na Akyou, onde construí um pipeline completo de inteligência documental usando a OpenAI API.`,
       stack: "Stack",

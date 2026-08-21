@@ -56,13 +56,37 @@ const experiences: ExperienceItem[] = [
     bullets: {
       en: [
         "Built and deployed LLM agents in production for contextual analysis supporting governance decisions",
-        "Engineered Python automations orchestrating operational workflows, saving 1.4 FTE across 9 deliveries in 7 months",
+        "Engineered Python automations orchestrating operational workflows, nine of them shipped over seven months",
         "Deployed automations as containerized microservices on the team's Docker, Kubernetes, and GitLab CI/CD platform",
       ],
       pt: [
         "Construí e coloquei agentes LLM em produção para análise contextual apoiando decisões de governança",
-        "Desenvolvi automações em Python orquestrando workflows operacionais, economizando 1,4 FTE em 9 entregas ao longo de 7 meses",
+        "Desenvolvi automações em Python orquestrando workflows operacionais, nove delas entregues ao longo de sete meses",
         "Fiz deploy das automações como microsserviços conteinerizados na plataforma de Docker, Kubernetes e GitLab CI/CD do time",
+      ],
+    },
+  },
+  {
+    company: "CEFET-MG",
+    role: {
+      en: "Undergraduate Researcher · LLM Financial Research",
+      pt: "Iniciação Científica · Pesquisa em LLM para Finanças",
+    },
+    period: {
+      en: "Aug 2026 to Present",
+      pt: "Ago 2026 até Atual",
+    },
+    stack: ["Python", "LLMs", "Time Series", "FinBERT", "Portfolio Optimization"],
+    bullets: {
+      en: [
+        "Hybrid LLM Models for Market Prediction and Financial Risk Management, advised at CEFET-MG",
+        "Integrating numerical and textual signals: price series, financial news and sentiment, aligned on the same timeline",
+        "Evaluating the combined method against each approach on its own, rather than reporting a single number in isolation",
+      ],
+      pt: [
+        "Modelos Híbridos Baseados em LLM para Previsão de Mercado e Gestão de Risco Financeiro, com orientação no CEFET-MG",
+        "Integração de sinais numéricos e textuais: séries de preços, notícias financeiras e análise de sentimento, alinhados na mesma linha temporal",
+        "Avaliação do método combinado contra cada abordagem isolada, em vez de reportar um número sozinho",
       ],
     },
   },

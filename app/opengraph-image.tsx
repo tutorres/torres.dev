@@ -10,7 +10,7 @@ import { ImageResponse } from 'next/og'
 // typography with zero network calls at build or request time. Hierarchy is
 // carried by size and by the zinc contrast steps, not by font weight.
 
-export const alt = 'Arthur Torres, AI Engineer. 1.4 FTE saved in 7 months. 37M telemetry records modeled.'
+export const alt = 'Arthur Torres, Applied AI Engineer. Nine automations shipped in 7 months. 37M telemetry records modeled.'
 
 export const size = {
   width: 1200,
@@ -27,7 +27,7 @@ const RULE = '#3f3f3f'
 const HAIRLINE = '#27272a'
 
 const PROOFS = [
-  { figure: '1.4', label: 'FTE saved in 7 months' },
+  { figure: '9', label: 'automations shipped in 7 months' },
   { figure: '37M', label: 'telemetry records modeled' },
 ]
 

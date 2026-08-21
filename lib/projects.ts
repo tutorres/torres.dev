@@ -20,8 +20,8 @@ export const projects: Project[] = [
   {
     title: "Vale Desenvolver 2026: Mining Fleet Telemetry",
     description: {
-      en: "End-to-end predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Built for Vale's Programa Desenvolver 2026.",
-      pt: "Pipeline preditivo de ponta a ponta para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Construído para o Programa Desenvolver 2026 da Vale.",
+      en: "End-to-end predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Submitted to Vale's Programa Desenvolver 2026, an open challenge.",
+      pt: "Pipeline preditivo de ponta a ponta para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Entregue no Programa Desenvolver 2026 da Vale, um desafio aberto.",
     },
     stack: ["Python", "Pandas", "XGBoost", "LightGBM", "SHAP", "DuckDB", "scikit-learn", "pytest"],
     status: "deepDive",
