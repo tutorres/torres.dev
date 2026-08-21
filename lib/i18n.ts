@@ -36,7 +36,7 @@ export const translations = {
       // reads as self-justification. "Measure what they change" says the same
       // thing from a position of confidence: I quantify impact, rather than I
       // prove myself.
-      tagline: "I ship LLM agents and ML models into production and measure what they change.",
+      tagline: "I architect AI into operational pipelines: what becomes an agent, what stays deterministic, and what should not be built.",
       location: "Belo Horizonte, Brazil (UTC-3)",
       cta: "Read the case study",
       // No performance metrics here, by decision. An F1 read off a landing page
@@ -55,7 +55,7 @@ export const translations = {
     // About
     about: {
       title: "About",
-      description: `I build LLM agents and automations that solve real operational problems.
+      description: `I decide where AI belongs in an operational pipeline, and where it does not. What becomes an agent, what stays deterministic code, and what should not be built at all.
 
 Currently at Banco Inter's Global Operations, where I design the system prompts, tools and MCP integrations behind agents running in production, plus the Python automations around them. Nine of those shipped in seven months.
 
@@ -154,7 +154,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       // ainda não levantou e soa como autojustificativa. "Meço o que mudam" diz
       // o mesmo de um lugar confiante: eu quantifico impacto, em vez de eu me
       // provo.
-      tagline: "Coloco agentes LLM e modelos de ML em produção e meço o que eles mudam.",
+      tagline: "Arquiteto IA dentro de pipelines operacionais: o que vira agente, o que continua determinístico, e o que não deveria ser construído.",
       location: "Belo Horizonte, Brasil (UTC-3)",
       cta: "Ler o case study",
       // Sem métrica de desempenho aqui, por decisão. F1 solto numa landing page
@@ -172,7 +172,7 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     // About
     about: {
       title: "Sobre",
-      description: `Construo agentes LLM e automações que resolvem problemas operacionais reais.
+      description: `Decido onde a IA entra numa pipeline operacional, e onde ela não entra. O que vira agente, o que continua código determinístico, e o que não deveria ser construído.
 
 Atualmente nas Operações Globais do Banco Inter, onde desenho os system prompts, as tools e as integrações MCP por trás de agentes rodando em produção, além das automações em Python ao redor deles. Nove delas entraram em produção em sete meses.
 
