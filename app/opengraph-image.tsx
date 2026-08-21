@@ -10,7 +10,7 @@ import { ImageResponse } from 'next/og'
 // typography with zero network calls at build or request time. Hierarchy is
 // carried by size and by the zinc contrast steps, not by font weight.
 
-export const alt = 'Arthur Torres, Applied AI Engineer. Nine automations shipped in 7 months. 37M telemetry records modeled.'
+export const alt = 'Arthur Torres, Applied AI Engineer. End-to-end ML over 37M rows of production telemetry. LLM agents in production under audit constraints.'
 
 export const size = {
   width: 1200,
@@ -26,9 +26,12 @@ const SUBTLE = '#71717a'
 const RULE = '#3f3f3f'
 const HAIRLINE = '#27272a'
 
+// One figure, not two. The pair used to read as a stat block, but both of the
+// old rows were performance or volume claims and both came out. What is left is
+// scale, which is the one number the page still stands behind without the case
+// study open next to it.
 const PROOFS = [
-  { figure: '9', label: 'automations shipped in 7 months' },
-  { figure: '37M', label: 'telemetry records modeled' },
+  { figure: '37M', label: 'rows of production telemetry' },
 ]
 
 export default async function Image() {
@@ -75,7 +78,7 @@ export default async function Image() {
               color: MUTED,
             }}
           >
-            AI Engineer
+            Applied AI Engineer
           </div>
 
           <div

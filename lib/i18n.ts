@@ -39,12 +39,17 @@ export const translations = {
       tagline: "I ship LLM agents and ML models into production and measure what they change.",
       location: "Belo Horizonte, Brazil (UTC-3)",
       cta: "Read the case study",
-      // Results, never volumes. "37M records modeled" is a brag with no outcome
-      // attached; "4.9x the heuristic" is a number someone can argue with.
+      // No performance metrics here, by decision. An F1 read off a landing page
+      // invites a comparison the reader cannot make and the page cannot defend;
+      // the figures live in the case study and the articles, with the context
+      // that makes them mean anything. What is left is capability and rigour:
+      // what was evaluated, at what scale, under what constraints. "37M rows"
+      // stays because it is scale, not a score, and it is the only thing
+      // separating production telemetry from a public dataset.
       proof: {
-        result: "Nine automations shipped at a bank in seven months",
-        honesty: "4.9x the operational heuristic on 37M mining records",
-        production: "LLM agents in production under audit constraints",
+        result: "LLM agents evaluated for decision quality before rollout",
+        honesty: "End-to-end ML over 37M rows of production telemetry, benchmarked on a temporal split",
+        production: "Containerized services in production under audit constraints",
       },
     },
     // About
@@ -152,12 +157,16 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       tagline: "Coloco agentes LLM e modelos de ML em produção e meço o que eles mudam.",
       location: "Belo Horizonte, Brasil (UTC-3)",
       cta: "Ler o case study",
-      // Resultado, nunca volume. "37M registros modelados" é vaidade sem
-      // desfecho; "4,9x a heurística" é um número com que dá para discordar.
+      // Sem métrica de desempenho aqui, por decisão. F1 solto numa landing page
+      // convida a uma comparação que o leitor não tem como fazer e a página não
+      // tem como defender; os números moram no case study e nos artigos, com o
+      // contexto que os torna legíveis. Fica capacidade e rigor: o que foi
+      // avaliado, em que escala, sob que restrição. "37M registros" fica porque
+      // é escala, não nota.
       proof: {
-        result: "Nove automações entregues num banco em sete meses",
-        honesty: "4,9x a heurística operacional em 37M registros de mineração",
-        production: "Agentes LLM em produção sob restrição de auditoria",
+        result: "Agentes LLM avaliados em qualidade de decisão antes do rollout",
+        honesty: "ML de ponta a ponta sobre 37M registros de telemetria em produção, com split temporal",
+        production: "Microsserviços conteinerizados em produção sob restrição de auditoria",
       },
     },
     // About
