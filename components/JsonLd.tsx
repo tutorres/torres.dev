@@ -53,7 +53,7 @@ export function PersonJsonLd() {
       addressRegion: "MG",
       addressCountry: "BR",
     },
-    knowsAbout: ["LLM agents", "Model Context Protocol", "Retrieval-Augmented Generation", "Python", "LLM evaluation"],
+    knowsAbout: ["LLM agents", "Model Context Protocol", "FastAPI", "SQL", "Terraform", "Python", "LLM evaluation"],
   }
 
   return <JsonLdScript data={data} />

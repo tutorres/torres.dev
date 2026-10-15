@@ -14,13 +14,13 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 // international market. Page content stays bilingual via the EN/PT toggle.
 // The copy leans on proper nouns and figures so it reads the same either way.
 const SITE_DESCRIPTION =
-  'Applied AI Engineer. Production LLM agents at Banco Inter: system prompts, tool design and MCP integrations in regulated finance. Predictive maintenance on 37M telemetry records in an open Vale challenge, code and case study public. Undergraduate research at CEFET-MG on LLM models for market prediction and financial risk.'
+  'Software engineer and AI engineer from Brazil. Python and FastAPI services, SQL and LLM agents for a bank’s US operation, as an intern at Banco Inter. Predictive maintenance on 37M telemetry records in an open Vale challenge, code and case study public. Undergraduate research at CEFET-MG on LLM models for market prediction and financial risk.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Arthur Torres · Applied AI Engineer',
+  title: 'Arthur Torres · Software Engineer & AI Engineer',
   description: SITE_DESCRIPTION,
-  keywords: ['AI Engineer', 'AI Automation Engineer', 'Applied AI Engineer', 'Forward Deployed Engineer', 'LLM Agents', 'MCP', 'Model Context Protocol', 'Tool design', 'LLM evaluation', 'Python', 'FastAPI', 'Automation', 'Docker', 'Kubernetes', 'Arthur Torres'],
+  keywords: ['Software Engineer', 'Backend Engineer', 'AI Engineer', 'Python', 'FastAPI', 'SQL', 'LLM Agents', 'MCP', 'Model Context Protocol', 'LLM evaluation', 'Terraform', 'AWS', 'Docker', 'Kubernetes', 'Arthur Torres'],
   authors: [{ name: 'Arthur Torres' }],
   creator: 'Arthur Torres',
   alternates: {
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'pt_BR',
     url: SITE_URL,
-    title: 'Arthur Torres · Applied AI Engineer',
+    title: 'Arthur Torres · Software Engineer & AI Engineer',
     description: SITE_DESCRIPTION,
     siteName: 'Arthur Torres',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Arthur Torres · Applied AI Engineer',
+    title: 'Arthur Torres · Software Engineer & AI Engineer',
     description: SITE_DESCRIPTION,
   },
   robots: {

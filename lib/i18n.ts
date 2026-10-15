@@ -30,13 +30,13 @@ export const translations = {
     },
     // Hero
     hero: {
-      title: "Applied AI Engineer",
+      title: "Software Engineer & AI Engineer",
       // Leads with outcome, not method. An earlier version led with "show how I
       // know they work", which answers a doubt the reader has not raised yet and
       // reads as self-justification. "Measure what they change" says the same
       // thing from a position of confidence: I quantify impact, rather than I
       // prove myself.
-      tagline: "I architect AI into operational pipelines: what becomes an agent, what stays deterministic, and what should not be built.",
+      tagline: "I build Python services and LLM agents, and decide what becomes an agent, what stays deterministic code, and what should not be built.",
       location: "Belo Horizonte, Brazil (UTC-3)",
       cta: "Read the case study",
       // No performance metrics here, by decision. An F1 read off a landing page
@@ -47,23 +47,21 @@ export const translations = {
       // stays because it is scale, not a score, and it is the only thing
       // separating production telemetry from a public dataset.
       proof: {
-        result: "LLM agents evaluated for decision quality before rollout",
-        honesty: "End-to-end ML over 37M rows of production telemetry, benchmarked on a temporal split",
-        production: "Containerized services in production under audit constraints",
+        result: "Model choice by evaluation against reference answers, before rollout",
+        honesty: "Predictive maintenance over 37M rows of mining telemetry, benchmarked on a temporal split",
+        production: "Python services shipped through a bank's CI/CD to Kubernetes",
       },
     },
     // About
     about: {
       title: "About",
-      description: `I decide where AI belongs in an operational pipeline, and where it does not. What becomes an agent, what stays deterministic code, and what should not be built at all.
+      description: `Software engineer from Brazil with over two years of professional work, today an intern at Banco Inter, building Python and FastAPI services with SQL as the data layer, and LLM agents for the bank's US operation.
 
-Currently at Banco Inter's Global Operations, where I design the system prompts, tools and MCP integrations behind agents running in production, plus the Python automations around them. Nine of those shipped in seven months.
+At Inter I work with the team that serves the US operation. I write Python services behind onboarding decisions, document analysis and financial reconciliation with TDD. They ship through the bank's CI/CD to Kubernetes, and I create each service's AWS resources with Terraform: Parameter Store, S3 and IAM. Part of it is agentic: LLM agents that read company formation documents and return the fields and the mismatches, and an MCP server that gives a model read-only access to data, scoped to a dedicated service user. I compare candidate models against reference answers before shipping.
 
-Working inside a bank means every agent ships under audit, access and governance constraints, so I care as much about evaluation and guardrails as about the prompt.
+Alongside that I do undergraduate research at CEFET-MG on hybrid LLM models for market prediction and financial risk, benchmarking the combined method against each approach on its own.
 
-Alongside that I do undergraduate research at CEFET-MG on hybrid LLM models for market prediction and financial risk, where the point is benchmarking the combined method against each approach on its own rather than reporting one number in isolation.
-
-Previously at Akyou, where I built an end-to-end document intelligence pipeline using the OpenAI API.`,
+Before Inter I spent 21 months at Akyou, the only engineer at an accessibility edtech, where I built the product prototype in Python and deployed it on AWS. I also built a live assessment platform for a paying client with a partner, on Next.js and Supabase.`,
       stack: "Stack",
     },
     // Experience
@@ -148,13 +146,13 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
     },
     // Hero
     hero: {
-      title: "Applied AI Engineer",
+      title: "Software Engineer & AI Engineer",
       // Lidera por resultado, não por método. A versão anterior liderava com
       // "mostro como sei que funcionam", que responde a uma dúvida que o leitor
       // ainda não levantou e soa como autojustificativa. "Meço o que mudam" diz
       // o mesmo de um lugar confiante: eu quantifico impacto, em vez de eu me
       // provo.
-      tagline: "Arquiteto IA dentro de pipelines operacionais: o que vira agente, o que continua determinístico, e o que não deveria ser construído.",
+      tagline: "Construo serviços em Python e agentes de LLM, e decido o que vira agente, o que continua código determinístico e o que não deveria ser construído.",
       location: "Belo Horizonte, Brasil (UTC-3)",
       cta: "Ler o case study",
       // Sem métrica de desempenho aqui, por decisão. F1 solto numa landing page
@@ -164,23 +162,21 @@ Previously at Akyou, where I built an end-to-end document intelligence pipeline 
       // avaliado, em que escala, sob que restrição. "37M registros" fica porque
       // é escala, não nota.
       proof: {
-        result: "Agentes LLM avaliados em qualidade de decisão antes do rollout",
-        honesty: "ML de ponta a ponta sobre 37M registros de telemetria em produção, com split temporal",
-        production: "Microsserviços conteinerizados em produção sob restrição de auditoria",
+        result: "Escolha de modelo por avaliação contra respostas de referência, antes do rollout",
+        honesty: "Manutenção preditiva sobre 37M registros de telemetria de mineração, com split temporal",
+        production: "Serviços em Python entregues pelo CI/CD do banco em Kubernetes",
       },
     },
     // About
     about: {
       title: "Sobre",
-      description: `Decido onde a IA entra numa pipeline operacional, e onde ela não entra. O que vira agente, o que continua código determinístico, e o que não deveria ser construído.
+      description: `Engenheiro de software, com mais de dois anos de trabalho profissional, hoje estagiário no Banco Inter, construindo serviços em Python e FastAPI, com SQL como camada de dados, e agentes de LLM para a operação dos Estados Unidos do banco.
 
-Atualmente nas Operações Globais do Banco Inter, onde desenho os system prompts, as tools e as integrações MCP por trás de agentes rodando em produção, além das automações em Python ao redor deles. Nove delas entraram em produção em sete meses.
+No Inter, trabalho com o time que atende a operação dos Estados Unidos. Escrevo com TDD serviços em Python por trás de decisões de onboarding, análise documental e conciliação financeira. Eles chegam à produção pelo CI/CD do banco, em Kubernetes, e eu crio os recursos de AWS de cada serviço com Terraform: Parameter Store, S3 e IAM. Parte disso é agêntico: agentes de LLM que leem documentos de constituição de empresa e devolvem os campos e as divergências, e um servidor MCP que dá ao modelo acesso somente leitura ao dado, limitado a um usuário de serviço dedicado. Comparo modelos candidatos contra respostas de referência antes de entregar.
 
-Trabalhar dentro de um banco significa que todo agente entra em produção sob restrições de auditoria, acesso e governança. Por isso me preocupo tanto com avaliação e guardrails quanto com o prompt.
+Em paralelo, faço iniciação científica no CEFET-MG sobre modelos híbridos de LLM para previsão de mercado e risco financeiro, comparando o método combinado contra cada abordagem isolada.
 
-Em paralelo, faço iniciação científica no CEFET-MG sobre modelos híbridos de LLM para previsão de mercado e risco financeiro, onde o ponto é comparar o método combinado contra cada abordagem isolada, em vez de reportar um número sozinho.
-
-Anteriormente na Akyou, onde construí um pipeline completo de inteligência documental usando a OpenAI API.`,
+Antes do Inter foram 21 meses na Akyou, como único engenheiro de uma edtech de acessibilidade, onde construí o protótipo do produto em Python e fiz o deploy na AWS. Também construí, em dupla, uma plataforma de avaliação no ar para um cliente pagante, em Next.js e Supabase.`,
       stack: "Stack",
     },
     // Experience

@@ -20,8 +20,8 @@ export const projects: Project[] = [
   {
     title: "Vale Desenvolver 2026: Mining Fleet Telemetry",
     description: {
-      en: "End-to-end predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Submitted to Vale's Programa Desenvolver 2026, an open challenge.",
-      pt: "Pipeline preditivo de ponta a ponta para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Entregue no Programa Desenvolver 2026 da Vale, um desafio aberto.",
+      en: "Predictive pipeline to anticipate critical failures (Don't Go events) on 37M+ telemetry records from an iron ore mining fleet. Submitted to Vale's Programa Desenvolver 2026, an open challenge.",
+      pt: "Pipeline preditivo para antecipar falhas críticas (eventos Don't Go) em 37M+ registros de telemetria de uma frota de mineração de ferro. Entregue no Programa Desenvolver 2026 da Vale, um desafio aberto.",
     },
     stack: ["Python", "Pandas", "XGBoost", "LightGBM", "SHAP", "DuckDB", "scikit-learn", "pytest"],
     status: "deepDive",
@@ -43,8 +43,8 @@ export const projects: Project[] = [
   {
     title: "Financial Intelligence Dashboard",
     description: {
-      en: "End-to-end financial data pipeline with medallion architecture, LSTM trend classification and Text-to-SQL LLM interface.",
-      pt: "Pipeline de dados financeiros de ponta a ponta com arquitetura medallion, classificação de tendências LSTM e interface Text-to-SQL com LLM.",
+      en: "Financial data pipeline with medallion architecture, LSTM trend classification and Text-to-SQL LLM interface.",
+      pt: "Pipeline de dados financeiros com arquitetura medallion, classificação de tendências LSTM e interface Text-to-SQL com LLM.",
     },
     stack: ["Python", "DuckDB", "PyTorch", "Groq API", "Streamlit"],
     github: "https://github.com/tutorres/Financial-Intelligence-Dashboard",

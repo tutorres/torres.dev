@@ -85,7 +85,7 @@ const copy: Record<Locale, Copy> = {
   en: {
     intro: (
       <>
-        Developed within the Programa Desenvolver (Vale). An end-to-end analytical solution to
+        Developed within the Programa Desenvolver (Vale). An analytical solution to
         anticipate critical equipment stop alerts (&quot;Don&apos;t Go&quot;) from the telemetry
         alarm history, allowing operations to act before a failure instead of merely reacting to it.
       </>
@@ -329,7 +329,7 @@ const copy: Record<Locale, Copy> = {
   pt: {
     intro: (
       <>
-        Desenvolvido dentro do Programa Desenvolver (Vale). Uma solução analítica de ponta a ponta
+        Desenvolvido dentro do Programa Desenvolver (Vale). Uma solução analítica
         para antecipar alertas críticos de parada de equipamento (&quot;Don&apos;t Go&quot;) a
         partir do histórico de alarmes de telemetria, permitindo que a operação aja antes da falha
         em vez de apenas reagir a ela.
