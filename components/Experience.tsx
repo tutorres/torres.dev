@@ -45,8 +45,8 @@ const experiences: ExperienceItem[] = [
   {
     company: "Banco Inter",
     role: {
-      en: "Software Engineering Intern · AI and Automation team",
-      pt: "Estagiário de Engenharia de Software · time de IA e Automação",
+      en: "Intern, Data & AI | Global Operations",
+      pt: "Estagiário, Dados e IA | Global Operations",
     },
     period: {
       en: "Jan 2026 to Present",
